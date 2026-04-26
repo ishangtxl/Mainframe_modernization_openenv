@@ -88,6 +88,10 @@ The current training run uses Hugging Face TRL LoRA SFT on `Qwen/Qwen3-14B` with
 | trained `Qwen/Qwen3-14B` LoRA SFT | model after SFT | 0.7971 | 4 / 6 |
 | `oracle-model` | sanity check with reference solutions | 1.0000 | 6 / 6 |
 
+![Qwen3-14B training reward evidence dashboard](plots/qwen3_14b_training_reward_evidence_dashboard.png)
+
+This dashboard summarizes the before/after reward evidence for the Qwen3-14B LoRA SFT run.
+
 ![Qwen3-14B LoRA SFT loss](plots/qwen3_14b_loss_curve.png)
 
 The SFT run reduced loss from `1.1350` to `0.1924` and improved mean token accuracy from `0.7938` to `0.9483`.
@@ -110,6 +114,7 @@ Kept in the submission root:
 - `outputs/training/hf_job_qwen3_14b_logs.txt`: raw HF Jobs log for provenance
 - `outputs/evals/base_qwen3_14b_all_tasks.json`: before-training rollout
 - `outputs/evals/score_summary.json`: judge-facing summary with deterministic, base-model, trained-model, and oracle rows
+- `plots/qwen3_14b_training_reward_evidence_dashboard.png`
 - `plots/qwen3_14b_loss_curve.png`
 - `plots/qwen3_14b_reward_before_after.png`
 - `plots/qwen3_14b_accepted_before_after.png`
