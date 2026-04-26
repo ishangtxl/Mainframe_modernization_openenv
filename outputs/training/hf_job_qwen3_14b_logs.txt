@@ -1,0 +1,797 @@
+Downloading numpy (15.9MiB)
+Downloading pillow (6.8MiB)
+Downloading nvidia-cuda-runtime (2.1MiB)
+Downloading networkx (2.0MiB)
+Downloading bitsandbytes (57.8MiB)
+Downloading cuda-bindings (6.0MiB)
+Downloading nvidia-cuda-nvrtc (86.0MiB)
+Downloading fonttools (4.8MiB)
+Downloading nvidia-cusparse (139.2MiB)
+Downloading nvidia-nvshmem-cu13 (57.6MiB)
+Downloading nvidia-nvjitlink (38.8MiB)
+Downloading nvidia-cusparselt-cu13 (162.0MiB)
+Downloading matplotlib (8.4MiB)
+Downloading torch (506.1MiB)
+Downloading pyarrow (46.6MiB)
+Downloading nvidia-cudnn-cu13 (349.1MiB)
+Downloading transformers (9.9MiB)
+Downloading hf-xet (4.0MiB)
+Downloading tokenizers (3.1MiB)
+Downloading sympy (6.0MiB)
+Downloading nvidia-cufft (204.2MiB)
+Downloading triton (179.5MiB)
+Downloading nvidia-cublas (403.5MiB)
+Downloading nvidia-cuda-cupti (10.2MiB)
+Downloading nvidia-curand (56.8MiB)
+Downloading pandas (10.4MiB)
+Downloading nvidia-nccl-cu13 (187.4MiB)
+Downloading setuptools (1.0MiB)
+Downloading nvidia-cusolver (191.6MiB)
+Downloading nvidia-cufile (1.2MiB)
+Downloading pygments (1.2MiB)
+Downloading kiwisolver (1.4MiB)
+Downloading aiohttp (1.7MiB)
+ Downloaded nvidia-cufile
+ Downloaded kiwisolver
+ Downloaded aiohttp
+ Downloaded nvidia-cuda-runtime
+ Downloaded pygments
+ Downloaded setuptools
+ Downloaded tokenizers
+ Downloaded networkx
+ Downloaded hf-xet
+ Downloaded fonttools
+ Downloaded cuda-bindings
+ Downloaded pillow
+ Downloaded matplotlib
+ Downloaded nvidia-cuda-cupti
+ Downloaded sympy
+ Downloaded numpy
+ Downloaded nvidia-nvjitlink
+ Downloaded pandas
+ Downloaded transformers
+ Downloaded nvidia-curand
+ Downloaded nvidia-nvshmem-cu13
+ Downloaded bitsandbytes
+ Downloaded nvidia-cuda-nvrtc
+ Downloaded pyarrow
+ Downloaded nvidia-cusparse
+ Downloaded nvidia-cusparselt-cu13
+ Downloaded nvidia-nccl-cu13
+ Downloaded nvidia-cusolver
+ Downloaded nvidia-cufft
+ Downloaded triton
+ Downloaded nvidia-cudnn-cu13
+ Downloaded nvidia-cublas
+ Downloaded torch
+Installed 84 packages in 450ms
+$ git clone https://github.com/ishangtxl/cobol-modernization-openenv.git /tmp/cobol-modernization-openenv
+Cloning into '/tmp/cobol-modernization-openenv'...
+$ /root/.cache/uv/builds-v0/.tmpQi62S5/bin/python -m pip install -U pip
+Requirement already satisfied: pip in /usr/local/lib/python3.12/site-packages (25.0.1)
+Collecting pip
+  Downloading pip-26.0.1-py3-none-any.whl.metadata (4.7 kB)
+Downloading pip-26.0.1-py3-none-any.whl (1.8 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.8/1.8 MB 202.1 MB/s eta 0:00:00
+Installing collected packages: pip
+  Attempting uninstall: pip
+    Found existing installation: pip 25.0.1
+    Not uninstalling pip at /usr/local/lib/python3.12/site-packages, outside environment /root/.cache/uv/builds-v0/.tmpQi62S5
+    Can't uninstall 'pip'. No files were found to uninstall.
+Successfully installed pip-26.0.1
+$ /root/.cache/uv/builds-v0/.tmpQi62S5/bin/python -m pip install -r legacy_cobol_env/training/requirements-gpu.txt
+Requirement already satisfied: accelerate>=1.0.0 in /root/.cache/uv/archive-v0/_zCg95lZEBKJ9MwE5wW11/lib/python3.12/site-packages (from -r legacy_cobol_env/training/requirements-gpu.txt (line 1)) (1.13.0)
+Requirement already satisfied: bitsandbytes>=0.43.0 in /root/.cache/uv/archive-v0/_zCg95lZEBKJ9MwE5wW11/lib/python3.12/site-packages (from -r legacy_cobol_env/training/requirements-gpu.txt (line 2)) (0.49.2)
+Requirement already satisfied: datasets>=3.0.0 in /root/.cache/uv/archive-v0/_zCg95lZEBKJ9MwE5wW11/lib/python3.12/site-packages (from -r legacy_cobol_env/training/requirements-gpu.txt (line 3)) (4.8.4)
+Requirement already satisfied: peft>=0.13.0 in /root/.cache/uv/archive-v0/_zCg95lZEBKJ9MwE5wW11/lib/python3.12/site-packages (from -r legacy_cobol_env/training/requirements-gpu.txt (line 4)) (0.19.1)
+Requirement already satisfied: torch>=2.4.0 in /root/.cache/uv/archive-v0/_zCg95lZEBKJ9MwE5wW11/lib/python3.12/site-packages (from -r legacy_cobol_env/training/requirements-gpu.txt (line 5)) (2.11.0)
+Requirement already satisfied: transformers>=4.45.0 in /root/.cache/uv/archive-v0/_zCg95lZEBKJ9MwE5wW11/lib/python3.12/site-packages (from -r legacy_cobol_env/training/requirements-gpu.txt (line 6)) (5.6.2)
+Requirement already satisfied: trl>=0.12.0 in /root/.cache/uv/archive-v0/_zCg95lZEBKJ9MwE5wW11/lib/python3.12/site-packages (from -r legacy_cobol_env/training/requirements-gpu.txt (line 7)) (1.2.0)
+Requirement already satisfied: numpy>=1.17 in /root/.cache/uv/archive-v0/_zCg95lZEBKJ9MwE5wW11/lib/python3.12/site-packages (from accelerate>=1.0.0->-r legacy_cobol_env/training/requirements-gpu.txt (line 1)) (2.4.4)
+Requirement already satisfied: packaging>=20.0 in /root/.cache/uv/archive-v0/_zCg95lZEBKJ9MwE5wW11/lib/python3.12/site-packages (from accelerate>=1.0.0->-r legacy_cobol_env/training/requirements-gpu.txt (line 1)) (26.2)
+Requirement already satisfied: psutil in /root/.cache/uv/archive-v0/_zCg95lZEBKJ9MwE5wW11/lib/python3.12/site-packages (from accelerate>=1.0.0->-r legacy_cobol_env/training/requirements-gpu.txt (line 1)) (7.2.2)
+Requirement already satisfied: pyyaml in /root/.cache/uv/archive-v0/_zCg95lZEBKJ9MwE5wW11/lib/python3.12/site-packages (from accelerate>=1.0.0->-r legacy_cobol_env/training/requirements-gpu.txt (line 1)) (6.0.3)
+Requirement already satisfied: huggingface_hub>=0.21.0 in /root/.cache/uv/archive-v0/_zCg95lZEBKJ9MwE5wW11/lib/python3.12/site-packages (from accelerate>=1.0.0->-r legacy_cobol_env/training/requirements-gpu.txt (line 1)) (1.12.0)
+Requirement already satisfied: safetensors>=0.4.3 in /root/.cache/uv/archive-v0/_zCg95lZEBKJ9MwE5wW11/lib/python3.12/site-packages (from accelerate>=1.0.0->-r legacy_cobol_env/training/requirements-gpu.txt (line 1)) (0.7.0)
+Requirement already satisfied: filelock in /root/.cache/uv/archive-v0/_zCg95lZEBKJ9MwE5wW11/lib/python3.12/site-packages (from torch>=2.4.0->-r legacy_cobol_env/training/requirements-gpu.txt (line 5)) (3.29.0)
+Requirement already satisfied: typing-extensions>=4.10.0 in /root/.cache/uv/archive-v0/_zCg95lZEBKJ9MwE5wW11/lib/python3.12/site-packages (from torch>=2.4.0->-r legacy_cobol_env/training/requirements-gpu.txt (line 5)) (4.15.0)
+Requirement already satisfied: setuptools<82 in /root/.cache/uv/archive-v0/_zCg95lZEBKJ9MwE5wW11/lib/python3.12/site-packages (from torch>=2.4.0->-r legacy_cobol_env/training/requirements-gpu.txt (line 5)) (81.0.0)
+Requirement already satisfied: sympy>=1.13.3 in /root/.cache/uv/archive-v0/_zCg95lZEBKJ9MwE5wW11/lib/python3.12/site-packages (from torch>=2.4.0->-r legacy_cobol_env/training/requirements-gpu.txt (line 5)) (1.14.0)
+Requirement already satisfied: networkx>=2.5.1 in /root/.cache/uv/archive-v0/_zCg95lZEBKJ9MwE5wW11/lib/python3.12/site-packages (from torch>=2.4.0->-r legacy_cobol_env/training/requirements-gpu.txt (line 5)) (3.6.1)
+Requirement already satisfied: jinja2 in /root/.cache/uv/archive-v0/_zCg95lZEBKJ9MwE5wW11/lib/python3.12/site-packages (from torch>=2.4.0->-r legacy_cobol_env/training/requirements-gpu.txt (line 5)) (3.1.6)
+Requirement already satisfied: fsspec>=0.8.5 in /root/.cache/uv/archive-v0/_zCg95lZEBKJ9MwE5wW11/lib/python3.12/site-packages (from torch>=2.4.0->-r legacy_cobol_env/training/requirements-gpu.txt (line 5)) (2026.2.0)
+Requirement already satisfied: cuda-toolkit==13.0.2 in /root/.cache/uv/archive-v0/_zCg95lZEBKJ9MwE5wW11/lib/python3.12/site-packages (from cuda-toolkit[cublas,cudart,cufft,cufile,cupti,curand,cusolver,cusparse,nvjitlink,nvrtc,nvtx]==13.0.2; platform_system == "Linux"->torch>=2.4.0->-r legacy_cobol_env/training/requirements-gpu.txt (line 5)) (13.0.2)
+Requirement already satisfied: cuda-bindings<14,>=13.0.3 in /root/.cache/uv/archive-v0/_zCg95lZEBKJ9MwE5wW11/lib/python3.12/site-packages (from torch>=2.4.0->-r legacy_cobol_env/training/requirements-gpu.txt (line 5)) (13.2.0)
+Requirement already satisfied: nvidia-cudnn-cu13==9.19.0.56 in /root/.cache/uv/archive-v0/_zCg95lZEBKJ9MwE5wW11/lib/python3.12/site-packages (from torch>=2.4.0->-r legacy_cobol_env/training/requirements-gpu.txt (line 5)) (9.19.0.56)
+Requirement already satisfied: nvidia-cusparselt-cu13==0.8.0 in /root/.cache/uv/archive-v0/_zCg95lZEBKJ9MwE5wW11/lib/python3.12/site-packages (from torch>=2.4.0->-r legacy_cobol_env/training/requirements-gpu.txt (line 5)) (0.8.0)
+Requirement already satisfied: nvidia-nccl-cu13==2.28.9 in /root/.cache/uv/archive-v0/_zCg95lZEBKJ9MwE5wW11/lib/python3.12/site-packages (from torch>=2.4.0->-r legacy_cobol_env/training/requirements-gpu.txt (line 5)) (2.28.9)
+Requirement already satisfied: nvidia-nvshmem-cu13==3.4.5 in /root/.cache/uv/archive-v0/_zCg95lZEBKJ9MwE5wW11/lib/python3.12/site-packages (from torch>=2.4.0->-r legacy_cobol_env/training/requirements-gpu.txt (line 5)) (3.4.5)
+Requirement already satisfied: triton==3.6.0 in /root/.cache/uv/archive-v0/_zCg95lZEBKJ9MwE5wW11/lib/python3.12/site-packages (from torch>=2.4.0->-r legacy_cobol_env/training/requirements-gpu.txt (line 5)) (3.6.0)
+Requirement already satisfied: nvidia-cublas==13.1.0.3.* in /root/.cache/uv/archive-v0/_zCg95lZEBKJ9MwE5wW11/lib/python3.12/site-packages (from cuda-toolkit[cublas,cudart,cufft,cufile,cupti,curand,cusolver,cusparse,nvjitlink,nvrtc,nvtx]==13.0.2; platform_system == "Linux"->torch>=2.4.0->-r legacy_cobol_env/training/requirements-gpu.txt (line 5)) (13.1.0.3)
+Requirement already satisfied: nvidia-cuda-runtime==13.0.96.* in /root/.cache/uv/archive-v0/_zCg95lZEBKJ9MwE5wW11/lib/python3.12/site-packages (from cuda-toolkit[cublas,cudart,cufft,cufile,cupti,curand,cusolver,cusparse,nvjitlink,nvrtc,nvtx]==13.0.2; platform_system == "Linux"->torch>=2.4.0->-r legacy_cobol_env/training/requirements-gpu.txt (line 5)) (13.0.96)
+Requirement already satisfied: nvidia-cufft==12.0.0.61.* in /root/.cache/uv/archive-v0/_zCg95lZEBKJ9MwE5wW11/lib/python3.12/site-packages (from cuda-toolkit[cublas,cudart,cufft,cufile,cupti,curand,cusolver,cusparse,nvjitlink,nvrtc,nvtx]==13.0.2; platform_system == "Linux"->torch>=2.4.0->-r legacy_cobol_env/training/requirements-gpu.txt (line 5)) (12.0.0.61)
+Requirement already satisfied: nvidia-cufile==1.15.1.6.* in /root/.cache/uv/archive-v0/_zCg95lZEBKJ9MwE5wW11/lib/python3.12/site-packages (from cuda-toolkit[cublas,cudart,cufft,cufile,cupti,curand,cusolver,cusparse,nvjitlink,nvrtc,nvtx]==13.0.2; platform_system == "Linux"->torch>=2.4.0->-r legacy_cobol_env/training/requirements-gpu.txt (line 5)) (1.15.1.6)
+Requirement already satisfied: nvidia-cuda-cupti==13.0.85.* in /root/.cache/uv/archive-v0/_zCg95lZEBKJ9MwE5wW11/lib/python3.12/site-packages (from cuda-toolkit[cublas,cudart,cufft,cufile,cupti,curand,cusolver,cusparse,nvjitlink,nvrtc,nvtx]==13.0.2; platform_system == "Linux"->torch>=2.4.0->-r legacy_cobol_env/training/requirements-gpu.txt (line 5)) (13.0.85)
+Requirement already satisfied: nvidia-curand==10.4.0.35.* in /root/.cache/uv/archive-v0/_zCg95lZEBKJ9MwE5wW11/lib/python3.12/site-packages (from cuda-toolkit[cublas,cudart,cufft,cufile,cupti,curand,cusolver,cusparse,nvjitlink,nvrtc,nvtx]==13.0.2; platform_system == "Linux"->torch>=2.4.0->-r legacy_cobol_env/training/requirements-gpu.txt (line 5)) (10.4.0.35)
+Requirement already satisfied: nvidia-cusolver==12.0.4.66.* in /root/.cache/uv/archive-v0/_zCg95lZEBKJ9MwE5wW11/lib/python3.12/site-packages (from cuda-toolkit[cublas,cudart,cufft,cufile,cupti,curand,cusolver,cusparse,nvjitlink,nvrtc,nvtx]==13.0.2; platform_system == "Linux"->torch>=2.4.0->-r legacy_cobol_env/training/requirements-gpu.txt (line 5)) (12.0.4.66)
+Requirement already satisfied: nvidia-cusparse==12.6.3.3.* in /root/.cache/uv/archive-v0/_zCg95lZEBKJ9MwE5wW11/lib/python3.12/site-packages (from cuda-toolkit[cublas,cudart,cufft,cufile,cupti,curand,cusolver,cusparse,nvjitlink,nvrtc,nvtx]==13.0.2; platform_system == "Linux"->torch>=2.4.0->-r legacy_cobol_env/training/requirements-gpu.txt (line 5)) (12.6.3.3)
+Requirement already satisfied: nvidia-nvjitlink==13.0.88.* in /root/.cache/uv/archive-v0/_zCg95lZEBKJ9MwE5wW11/lib/python3.12/site-packages (from cuda-toolkit[cublas,cudart,cufft,cufile,cupti,curand,cusolver,cusparse,nvjitlink,nvrtc,nvtx]==13.0.2; platform_system == "Linux"->torch>=2.4.0->-r legacy_cobol_env/training/requirements-gpu.txt (line 5)) (13.0.88)
+Requirement already satisfied: nvidia-cuda-nvrtc==13.0.88.* in /root/.cache/uv/archive-v0/_zCg95lZEBKJ9MwE5wW11/lib/python3.12/site-packages (from cuda-toolkit[cublas,cudart,cufft,cufile,cupti,curand,cusolver,cusparse,nvjitlink,nvrtc,nvtx]==13.0.2; platform_system == "Linux"->torch>=2.4.0->-r legacy_cobol_env/training/requirements-gpu.txt (line 5)) (13.0.88)
+Requirement already satisfied: nvidia-nvtx==13.0.85.* in /root/.cache/uv/archive-v0/_zCg95lZEBKJ9MwE5wW11/lib/python3.12/site-packages (from cuda-toolkit[cublas,cudart,cufft,cufile,cupti,curand,cusolver,cusparse,nvjitlink,nvrtc,nvtx]==13.0.2; platform_system == "Linux"->torch>=2.4.0->-r legacy_cobol_env/training/requirements-gpu.txt (line 5)) (13.0.85)
+Requirement already satisfied: cuda-pathfinder~=1.1 in /root/.cache/uv/archive-v0/_zCg95lZEBKJ9MwE5wW11/lib/python3.12/site-packages (from cuda-bindings<14,>=13.0.3->torch>=2.4.0->-r legacy_cobol_env/training/requirements-gpu.txt (line 5)) (1.5.3)
+Requirement already satisfied: pyarrow>=21.0.0 in /root/.cache/uv/archive-v0/_zCg95lZEBKJ9MwE5wW11/lib/python3.12/site-packages (from datasets>=3.0.0->-r legacy_cobol_env/training/requirements-gpu.txt (line 3)) (24.0.0)
+Requirement already satisfied: dill<0.4.2,>=0.3.0 in /root/.cache/uv/archive-v0/_zCg95lZEBKJ9MwE5wW11/lib/python3.12/site-packages (from datasets>=3.0.0->-r legacy_cobol_env/training/requirements-gpu.txt (line 3)) (0.4.1)
+Requirement already satisfied: pandas in /root/.cache/uv/archive-v0/_zCg95lZEBKJ9MwE5wW11/lib/python3.12/site-packages (from datasets>=3.0.0->-r legacy_cobol_env/training/requirements-gpu.txt (line 3)) (3.0.2)
+Requirement already satisfied: requests>=2.32.2 in /root/.cache/uv/archive-v0/_zCg95lZEBKJ9MwE5wW11/lib/python3.12/site-packages (from datasets>=3.0.0->-r legacy_cobol_env/training/requirements-gpu.txt (line 3)) (2.33.1)
+Requirement already satisfied: httpx<1.0.0 in /root/.cache/uv/archive-v0/_zCg95lZEBKJ9MwE5wW11/lib/python3.12/site-packages (from datasets>=3.0.0->-r legacy_cobol_env/training/requirements-gpu.txt (line 3)) (0.28.1)
+Requirement already satisfied: tqdm>=4.66.3 in /root/.cache/uv/archive-v0/_zCg95lZEBKJ9MwE5wW11/lib/python3.12/site-packages (from datasets>=3.0.0->-r legacy_cobol_env/training/requirements-gpu.txt (line 3)) (4.67.3)
+Requirement already satisfied: xxhash in /root/.cache/uv/archive-v0/_zCg95lZEBKJ9MwE5wW11/lib/python3.12/site-packages (from datasets>=3.0.0->-r legacy_cobol_env/training/requirements-gpu.txt (line 3)) (3.7.0)
+Requirement already satisfied: multiprocess<0.70.20 in /root/.cache/uv/archive-v0/_zCg95lZEBKJ9MwE5wW11/lib/python3.12/site-packages (from datasets>=3.0.0->-r legacy_cobol_env/training/requirements-gpu.txt (line 3)) (0.70.19)
+Requirement already satisfied: aiohttp!=4.0.0a0,!=4.0.0a1 in /root/.cache/uv/archive-v0/_zCg95lZEBKJ9MwE5wW11/lib/python3.12/site-packages (from fsspec[http]<=2026.2.0,>=2023.1.0->datasets>=3.0.0->-r legacy_cobol_env/training/requirements-gpu.txt (line 3)) (3.13.5)
+Requirement already satisfied: anyio in /root/.cache/uv/archive-v0/_zCg95lZEBKJ9MwE5wW11/lib/python3.12/site-packages (from httpx<1.0.0->datasets>=3.0.0->-r legacy_cobol_env/training/requirements-gpu.txt (line 3)) (4.13.0)
+Requirement already satisfied: certifi in /root/.cache/uv/archive-v0/_zCg95lZEBKJ9MwE5wW11/lib/python3.12/site-packages (from httpx<1.0.0->datasets>=3.0.0->-r legacy_cobol_env/training/requirements-gpu.txt (line 3)) (2026.4.22)
+Requirement already satisfied: httpcore==1.* in /root/.cache/uv/archive-v0/_zCg95lZEBKJ9MwE5wW11/lib/python3.12/site-packages (from httpx<1.0.0->datasets>=3.0.0->-r legacy_cobol_env/training/requirements-gpu.txt (line 3)) (1.0.9)
+Requirement already satisfied: idna in /root/.cache/uv/archive-v0/_zCg95lZEBKJ9MwE5wW11/lib/python3.12/site-packages (from httpx<1.0.0->datasets>=3.0.0->-r legacy_cobol_env/training/requirements-gpu.txt (line 3)) (3.13)
+Requirement already satisfied: h11>=0.16 in /root/.cache/uv/archive-v0/_zCg95lZEBKJ9MwE5wW11/lib/python3.12/site-packages (from httpcore==1.*->httpx<1.0.0->datasets>=3.0.0->-r legacy_cobol_env/training/requirements-gpu.txt (line 3)) (0.16.0)
+Requirement already satisfied: hf-xet<2.0.0,>=1.4.3 in /root/.cache/uv/archive-v0/_zCg95lZEBKJ9MwE5wW11/lib/python3.12/site-packages (from huggingface_hub>=0.21.0->accelerate>=1.0.0->-r legacy_cobol_env/training/requirements-gpu.txt (line 1)) (1.4.3)
+Requirement already satisfied: typer in /root/.cache/uv/archive-v0/_zCg95lZEBKJ9MwE5wW11/lib/python3.12/site-packages (from huggingface_hub>=0.21.0->accelerate>=1.0.0->-r legacy_cobol_env/training/requirements-gpu.txt (line 1)) (0.24.2)
+Requirement already satisfied: regex>=2025.10.22 in /root/.cache/uv/archive-v0/_zCg95lZEBKJ9MwE5wW11/lib/python3.12/site-packages (from transformers>=4.45.0->-r legacy_cobol_env/training/requirements-gpu.txt (line 6)) (2026.4.4)
+Requirement already satisfied: tokenizers<=0.23.0,>=0.22.0 in /root/.cache/uv/archive-v0/_zCg95lZEBKJ9MwE5wW11/lib/python3.12/site-packages (from transformers>=4.45.0->-r legacy_cobol_env/training/requirements-gpu.txt (line 6)) (0.22.2)
+Requirement already satisfied: aiohappyeyeballs>=2.5.0 in /root/.cache/uv/archive-v0/_zCg95lZEBKJ9MwE5wW11/lib/python3.12/site-packages (from aiohttp!=4.0.0a0,!=4.0.0a1->fsspec[http]<=2026.2.0,>=2023.1.0->datasets>=3.0.0->-r legacy_cobol_env/training/requirements-gpu.txt (line 3)) (2.6.1)
+Requirement already satisfied: aiosignal>=1.4.0 in /root/.cache/uv/archive-v0/_zCg95lZEBKJ9MwE5wW11/lib/python3.12/site-packages (from aiohttp!=4.0.0a0,!=4.0.0a1->fsspec[http]<=2026.2.0,>=2023.1.0->datasets>=3.0.0->-r legacy_cobol_env/training/requirements-gpu.txt (line 3)) (1.4.0)
+Requirement already satisfied: attrs>=17.3.0 in /root/.cache/uv/archive-v0/_zCg95lZEBKJ9MwE5wW11/lib/python3.12/site-packages (from aiohttp!=4.0.0a0,!=4.0.0a1->fsspec[http]<=2026.2.0,>=2023.1.0->datasets>=3.0.0->-r legacy_cobol_env/training/requirements-gpu.txt (line 3)) (26.1.0)
+Requirement already satisfied: frozenlist>=1.1.1 in /root/.cache/uv/archive-v0/_zCg95lZEBKJ9MwE5wW11/lib/python3.12/site-packages (from aiohttp!=4.0.0a0,!=4.0.0a1->fsspec[http]<=2026.2.0,>=2023.1.0->datasets>=3.0.0->-r legacy_cobol_env/training/requirements-gpu.txt (line 3)) (1.8.0)
+Requirement already satisfied: multidict<7.0,>=4.5 in /root/.cache/uv/archive-v0/_zCg95lZEBKJ9MwE5wW11/lib/python3.12/site-packages (from aiohttp!=4.0.0a0,!=4.0.0a1->fsspec[http]<=2026.2.0,>=2023.1.0->datasets>=3.0.0->-r legacy_cobol_env/training/requirements-gpu.txt (line 3)) (6.7.1)
+Requirement already satisfied: propcache>=0.2.0 in /root/.cache/uv/archive-v0/_zCg95lZEBKJ9MwE5wW11/lib/python3.12/site-packages (from aiohttp!=4.0.0a0,!=4.0.0a1->fsspec[http]<=2026.2.0,>=2023.1.0->datasets>=3.0.0->-r legacy_cobol_env/training/requirements-gpu.txt (line 3)) (0.4.1)
+Requirement already satisfied: yarl<2.0,>=1.17.0 in /root/.cache/uv/archive-v0/_zCg95lZEBKJ9MwE5wW11/lib/python3.12/site-packages (from aiohttp!=4.0.0a0,!=4.0.0a1->fsspec[http]<=2026.2.0,>=2023.1.0->datasets>=3.0.0->-r legacy_cobol_env/training/requirements-gpu.txt (line 3)) (1.23.0)
+Requirement already satisfied: charset_normalizer<4,>=2 in /root/.cache/uv/archive-v0/_zCg95lZEBKJ9MwE5wW11/lib/python3.12/site-packages (from requests>=2.32.2->datasets>=3.0.0->-r legacy_cobol_env/training/requirements-gpu.txt (line 3)) (3.4.7)
+Requirement already satisfied: urllib3<3,>=1.26 in /root/.cache/uv/archive-v0/_zCg95lZEBKJ9MwE5wW11/lib/python3.12/site-packages (from requests>=2.32.2->datasets>=3.0.0->-r legacy_cobol_env/training/requirements-gpu.txt (line 3)) (2.6.3)
+Requirement already satisfied: mpmath<1.4,>=1.1.0 in /root/.cache/uv/archive-v0/_zCg95lZEBKJ9MwE5wW11/lib/python3.12/site-packages (from sympy>=1.13.3->torch>=2.4.0->-r legacy_cobol_env/training/requirements-gpu.txt (line 5)) (1.3.0)
+Requirement already satisfied: MarkupSafe>=2.0 in /root/.cache/uv/archive-v0/_zCg95lZEBKJ9MwE5wW11/lib/python3.12/site-packages (from jinja2->torch>=2.4.0->-r legacy_cobol_env/training/requirements-gpu.txt (line 5)) (3.0.3)
+Requirement already satisfied: python-dateutil>=2.8.2 in /root/.cache/uv/archive-v0/_zCg95lZEBKJ9MwE5wW11/lib/python3.12/site-packages (from pandas->datasets>=3.0.0->-r legacy_cobol_env/training/requirements-gpu.txt (line 3)) (2.9.0.post0)
+Requirement already satisfied: six>=1.5 in /root/.cache/uv/archive-v0/_zCg95lZEBKJ9MwE5wW11/lib/python3.12/site-packages (from python-dateutil>=2.8.2->pandas->datasets>=3.0.0->-r legacy_cobol_env/training/requirements-gpu.txt (line 3)) (1.17.0)
+Requirement already satisfied: click>=8.2.1 in /root/.cache/uv/archive-v0/_zCg95lZEBKJ9MwE5wW11/lib/python3.12/site-packages (from typer->huggingface_hub>=0.21.0->accelerate>=1.0.0->-r legacy_cobol_env/training/requirements-gpu.txt (line 1)) (8.3.3)
+Requirement already satisfied: shellingham>=1.3.0 in /root/.cache/uv/archive-v0/_zCg95lZEBKJ9MwE5wW11/lib/python3.12/site-packages (from typer->huggingface_hub>=0.21.0->accelerate>=1.0.0->-r legacy_cobol_env/training/requirements-gpu.txt (line 1)) (1.5.4)
+Requirement already satisfied: rich>=12.3.0 in /root/.cache/uv/archive-v0/_zCg95lZEBKJ9MwE5wW11/lib/python3.12/site-packages (from typer->huggingface_hub>=0.21.0->accelerate>=1.0.0->-r legacy_cobol_env/training/requirements-gpu.txt (line 1)) (15.0.0)
+Requirement already satisfied: annotated-doc>=0.0.2 in /root/.cache/uv/archive-v0/_zCg95lZEBKJ9MwE5wW11/lib/python3.12/site-packages (from typer->huggingface_hub>=0.21.0->accelerate>=1.0.0->-r legacy_cobol_env/training/requirements-gpu.txt (line 1)) (0.0.4)
+Requirement already satisfied: markdown-it-py>=2.2.0 in /root/.cache/uv/archive-v0/_zCg95lZEBKJ9MwE5wW11/lib/python3.12/site-packages (from rich>=12.3.0->typer->huggingface_hub>=0.21.0->accelerate>=1.0.0->-r legacy_cobol_env/training/requirements-gpu.txt (line 1)) (4.0.0)
+Requirement already satisfied: pygments<3.0.0,>=2.13.0 in /root/.cache/uv/archive-v0/_zCg95lZEBKJ9MwE5wW11/lib/python3.12/site-packages (from rich>=12.3.0->typer->huggingface_hub>=0.21.0->accelerate>=1.0.0->-r legacy_cobol_env/training/requirements-gpu.txt (line 1)) (2.20.0)
+Requirement already satisfied: mdurl~=0.1 in /root/.cache/uv/archive-v0/_zCg95lZEBKJ9MwE5wW11/lib/python3.12/site-packages (from markdown-it-py>=2.2.0->rich>=12.3.0->typer->huggingface_hub>=0.21.0->accelerate>=1.0.0->-r legacy_cobol_env/training/requirements-gpu.txt (line 1)) (0.1.2)
+$ /root/.cache/uv/builds-v0/.tmpQi62S5/bin/python -m pip install -e .
+Obtaining file:///tmp/cobol-modernization-openenv
+  Installing build dependencies: started
+  Installing build dependencies: finished with status 'done'
+  Checking if build backend supports build_editable: started
+  Checking if build backend supports build_editable: finished with status 'done'
+  Getting requirements to build editable: started
+  Getting requirements to build editable: finished with status 'done'
+  Preparing editable metadata (pyproject.toml): started
+  Preparing editable metadata (pyproject.toml): finished with status 'done'
+Collecting openenv-core>=0.2.3 (from openenv-legacy-cobol-submission==0.1.0)
+  Downloading openenv_core-0.2.3-py3-none-any.whl.metadata (19 kB)
+Collecting openai>=1.0 (from openenv-legacy-cobol-submission==0.1.0)
+  Downloading openai-2.32.0-py3-none-any.whl.metadata (31 kB)
+Requirement already satisfied: huggingface_hub>=1.0 in /root/.cache/uv/archive-v0/_zCg95lZEBKJ9MwE5wW11/lib/python3.12/site-packages (from openenv-legacy-cobol-submission==0.1.0) (1.12.0)
+Requirement already satisfied: filelock>=3.10.0 in /root/.cache/uv/archive-v0/_zCg95lZEBKJ9MwE5wW11/lib/python3.12/site-packages (from huggingface_hub>=1.0->openenv-legacy-cobol-submission==0.1.0) (3.29.0)
+Requirement already satisfied: fsspec>=2023.5.0 in /root/.cache/uv/archive-v0/_zCg95lZEBKJ9MwE5wW11/lib/python3.12/site-packages (from huggingface_hub>=1.0->openenv-legacy-cobol-submission==0.1.0) (2026.2.0)
+Requirement already satisfied: hf-xet<2.0.0,>=1.4.3 in /root/.cache/uv/archive-v0/_zCg95lZEBKJ9MwE5wW11/lib/python3.12/site-packages (from huggingface_hub>=1.0->openenv-legacy-cobol-submission==0.1.0) (1.4.3)
+Requirement already satisfied: httpx<1,>=0.23.0 in /root/.cache/uv/archive-v0/_zCg95lZEBKJ9MwE5wW11/lib/python3.12/site-packages (from huggingface_hub>=1.0->openenv-legacy-cobol-submission==0.1.0) (0.28.1)
+Requirement already satisfied: packaging>=20.9 in /root/.cache/uv/archive-v0/_zCg95lZEBKJ9MwE5wW11/lib/python3.12/site-packages (from huggingface_hub>=1.0->openenv-legacy-cobol-submission==0.1.0) (26.2)
+Requirement already satisfied: pyyaml>=5.1 in /root/.cache/uv/archive-v0/_zCg95lZEBKJ9MwE5wW11/lib/python3.12/site-packages (from huggingface_hub>=1.0->openenv-legacy-cobol-submission==0.1.0) (6.0.3)
+Requirement already satisfied: tqdm>=4.42.1 in /root/.cache/uv/archive-v0/_zCg95lZEBKJ9MwE5wW11/lib/python3.12/site-packages (from huggingface_hub>=1.0->openenv-legacy-cobol-submission==0.1.0) (4.67.3)
+Requirement already satisfied: typer in /root/.cache/uv/archive-v0/_zCg95lZEBKJ9MwE5wW11/lib/python3.12/site-packages (from huggingface_hub>=1.0->openenv-legacy-cobol-submission==0.1.0) (0.24.2)
+Requirement already satisfied: typing-extensions>=4.1.0 in /root/.cache/uv/archive-v0/_zCg95lZEBKJ9MwE5wW11/lib/python3.12/site-packages (from huggingface_hub>=1.0->openenv-legacy-cobol-submission==0.1.0) (4.15.0)
+Requirement already satisfied: anyio in /root/.cache/uv/archive-v0/_zCg95lZEBKJ9MwE5wW11/lib/python3.12/site-packages (from httpx<1,>=0.23.0->huggingface_hub>=1.0->openenv-legacy-cobol-submission==0.1.0) (4.13.0)
+Requirement already satisfied: certifi in /root/.cache/uv/archive-v0/_zCg95lZEBKJ9MwE5wW11/lib/python3.12/site-packages (from httpx<1,>=0.23.0->huggingface_hub>=1.0->openenv-legacy-cobol-submission==0.1.0) (2026.4.22)
+Requirement already satisfied: httpcore==1.* in /root/.cache/uv/archive-v0/_zCg95lZEBKJ9MwE5wW11/lib/python3.12/site-packages (from httpx<1,>=0.23.0->huggingface_hub>=1.0->openenv-legacy-cobol-submission==0.1.0) (1.0.9)
+Requirement already satisfied: idna in /root/.cache/uv/archive-v0/_zCg95lZEBKJ9MwE5wW11/lib/python3.12/site-packages (from httpx<1,>=0.23.0->huggingface_hub>=1.0->openenv-legacy-cobol-submission==0.1.0) (3.13)
+Requirement already satisfied: h11>=0.16 in /root/.cache/uv/archive-v0/_zCg95lZEBKJ9MwE5wW11/lib/python3.12/site-packages (from httpcore==1.*->httpx<1,>=0.23.0->huggingface_hub>=1.0->openenv-legacy-cobol-submission==0.1.0) (0.16.0)
+Collecting distro<2,>=1.7.0 (from openai>=1.0->openenv-legacy-cobol-submission==0.1.0)
+  Downloading distro-1.9.0-py3-none-any.whl.metadata (6.8 kB)
+Collecting jiter<1,>=0.10.0 (from openai>=1.0->openenv-legacy-cobol-submission==0.1.0)
+  Downloading jiter-0.14.0-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (5.2 kB)
+Collecting pydantic<3,>=1.9.0 (from openai>=1.0->openenv-legacy-cobol-submission==0.1.0)
+  Downloading pydantic-2.13.3-py3-none-any.whl.metadata (108 kB)
+Collecting sniffio (from openai>=1.0->openenv-legacy-cobol-submission==0.1.0)
+  Downloading sniffio-1.3.1-py3-none-any.whl.metadata (3.9 kB)
+Collecting annotated-types>=0.6.0 (from pydantic<3,>=1.9.0->openai>=1.0->openenv-legacy-cobol-submission==0.1.0)
+  Downloading annotated_types-0.7.0-py3-none-any.whl.metadata (15 kB)
+Collecting pydantic-core==2.46.3 (from pydantic<3,>=1.9.0->openai>=1.0->openenv-legacy-cobol-submission==0.1.0)
+  Downloading pydantic_core-2.46.3-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (6.6 kB)
+Collecting typing-inspection>=0.4.2 (from pydantic<3,>=1.9.0->openai>=1.0->openenv-legacy-cobol-submission==0.1.0)
+  Downloading typing_inspection-0.4.2-py3-none-any.whl.metadata (2.6 kB)
+Collecting fastapi>=0.104.0 (from openenv-core>=0.2.3->openenv-legacy-cobol-submission==0.1.0)
+  Downloading fastapi-0.136.1-py3-none-any.whl.metadata (28 kB)
+Collecting uvicorn>=0.24.0 (from openenv-core>=0.2.3->openenv-legacy-cobol-submission==0.1.0)
+  Downloading uvicorn-0.46.0-py3-none-any.whl.metadata (6.7 kB)
+Requirement already satisfied: requests>=2.25.0 in /root/.cache/uv/archive-v0/_zCg95lZEBKJ9MwE5wW11/lib/python3.12/site-packages (from openenv-core>=0.2.3->openenv-legacy-cobol-submission==0.1.0) (2.33.1)
+Requirement already satisfied: rich>=13.0.0 in /root/.cache/uv/archive-v0/_zCg95lZEBKJ9MwE5wW11/lib/python3.12/site-packages (from openenv-core>=0.2.3->openenv-legacy-cobol-submission==0.1.0) (15.0.0)
+Collecting tomli>=2.3.0 (from openenv-core>=0.2.3->openenv-legacy-cobol-submission==0.1.0)
+  Downloading tomli-2.4.1-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (10 kB)
+Collecting tomli-w>=1.2.0 (from openenv-core>=0.2.3->openenv-legacy-cobol-submission==0.1.0)
+  Downloading tomli_w-1.2.0-py3-none-any.whl.metadata (5.7 kB)
+Collecting websockets>=15.0.1 (from openenv-core>=0.2.3->openenv-legacy-cobol-submission==0.1.0)
+  Downloading websockets-16.0-cp312-cp312-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl.metadata (6.8 kB)
+Collecting fastmcp>=3.0.0 (from openenv-core>=0.2.3->openenv-legacy-cobol-submission==0.1.0)
+  Downloading fastmcp-3.2.4-py3-none-any.whl.metadata (8.1 kB)
+Collecting gradio>=4.0.0 (from openenv-core>=0.2.3->openenv-legacy-cobol-submission==0.1.0)
+  Downloading gradio-6.13.0-py3-none-any.whl.metadata (17 kB)
+Collecting starlette>=0.46.0 (from fastapi>=0.104.0->openenv-core>=0.2.3->openenv-legacy-cobol-submission==0.1.0)
+  Downloading starlette-1.0.0-py3-none-any.whl.metadata (6.3 kB)
+Requirement already satisfied: annotated-doc>=0.0.2 in /root/.cache/uv/archive-v0/_zCg95lZEBKJ9MwE5wW11/lib/python3.12/site-packages (from fastapi>=0.104.0->openenv-core>=0.2.3->openenv-legacy-cobol-submission==0.1.0) (0.0.4)
+Collecting authlib>=1.6.5 (from fastmcp>=3.0.0->openenv-core>=0.2.3->openenv-legacy-cobol-submission==0.1.0)
+  Downloading authlib-1.7.0-py2.py3-none-any.whl.metadata (10.0 kB)
+Collecting cyclopts>=4.0.0 (from fastmcp>=3.0.0->openenv-core>=0.2.3->openenv-legacy-cobol-submission==0.1.0)
+  Downloading cyclopts-4.11.0-py3-none-any.whl.metadata (12 kB)
+Collecting exceptiongroup>=1.2.2 (from fastmcp>=3.0.0->openenv-core>=0.2.3->openenv-legacy-cobol-submission==0.1.0)
+  Downloading exceptiongroup-1.3.1-py3-none-any.whl.metadata (6.7 kB)
+Collecting griffelib>=2.0.0 (from fastmcp>=3.0.0->openenv-core>=0.2.3->openenv-legacy-cobol-submission==0.1.0)
+  Downloading griffelib-2.0.2-py3-none-any.whl.metadata (1.3 kB)
+Collecting jsonref>=1.1.0 (from fastmcp>=3.0.0->openenv-core>=0.2.3->openenv-legacy-cobol-submission==0.1.0)
+  Downloading jsonref-1.1.0-py3-none-any.whl.metadata (2.7 kB)
+Collecting jsonschema-path>=0.3.4 (from fastmcp>=3.0.0->openenv-core>=0.2.3->openenv-legacy-cobol-submission==0.1.0)
+  Downloading jsonschema_path-0.4.5-py3-none-any.whl.metadata (5.9 kB)
+Collecting mcp<2.0,>=1.24.0 (from fastmcp>=3.0.0->openenv-core>=0.2.3->openenv-legacy-cobol-submission==0.1.0)
+  Downloading mcp-1.27.0-py3-none-any.whl.metadata (8.2 kB)
+Collecting openapi-pydantic>=0.5.1 (from fastmcp>=3.0.0->openenv-core>=0.2.3->openenv-legacy-cobol-submission==0.1.0)
+  Downloading openapi_pydantic-0.5.1-py3-none-any.whl.metadata (10 kB)
+Collecting opentelemetry-api>=1.20.0 (from fastmcp>=3.0.0->openenv-core>=0.2.3->openenv-legacy-cobol-submission==0.1.0)
+  Downloading opentelemetry_api-1.41.1-py3-none-any.whl.metadata (1.5 kB)
+Collecting platformdirs>=4.0.0 (from fastmcp>=3.0.0->openenv-core>=0.2.3->openenv-legacy-cobol-submission==0.1.0)
+  Downloading platformdirs-4.9.6-py3-none-any.whl.metadata (4.7 kB)
+Collecting py-key-value-aio<0.5.0,>=0.4.4 (from py-key-value-aio[filetree,keyring,memory]<0.5.0,>=0.4.4->fastmcp>=3.0.0->openenv-core>=0.2.3->openenv-legacy-cobol-submission==0.1.0)
+  Downloading py_key_value_aio-0.4.4-py3-none-any.whl.metadata (15 kB)
+Collecting pyperclip>=1.9.0 (from fastmcp>=3.0.0->openenv-core>=0.2.3->openenv-legacy-cobol-submission==0.1.0)
+  Downloading pyperclip-1.11.0-py3-none-any.whl.metadata (2.4 kB)
+Collecting python-dotenv>=1.1.0 (from fastmcp>=3.0.0->openenv-core>=0.2.3->openenv-legacy-cobol-submission==0.1.0)
+  Downloading python_dotenv-1.2.2-py3-none-any.whl.metadata (27 kB)
+Collecting uncalled-for>=0.2.0 (from fastmcp>=3.0.0->openenv-core>=0.2.3->openenv-legacy-cobol-submission==0.1.0)
+  Downloading uncalled_for-0.3.1-py3-none-any.whl.metadata (2.9 kB)
+Collecting watchfiles>=1.0.0 (from fastmcp>=3.0.0->openenv-core>=0.2.3->openenv-legacy-cobol-submission==0.1.0)
+  Downloading watchfiles-1.1.1-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (4.9 kB)
+Collecting httpx-sse>=0.4 (from mcp<2.0,>=1.24.0->fastmcp>=3.0.0->openenv-core>=0.2.3->openenv-legacy-cobol-submission==0.1.0)
+  Downloading httpx_sse-0.4.3-py3-none-any.whl.metadata (9.7 kB)
+Collecting jsonschema>=4.20.0 (from mcp<2.0,>=1.24.0->fastmcp>=3.0.0->openenv-core>=0.2.3->openenv-legacy-cobol-submission==0.1.0)
+  Downloading jsonschema-4.26.0-py3-none-any.whl.metadata (7.6 kB)
+Collecting pydantic-settings>=2.5.2 (from mcp<2.0,>=1.24.0->fastmcp>=3.0.0->openenv-core>=0.2.3->openenv-legacy-cobol-submission==0.1.0)
+  Downloading pydantic_settings-2.14.0-py3-none-any.whl.metadata (3.4 kB)
+Collecting pyjwt>=2.10.1 (from pyjwt[crypto]>=2.10.1->mcp<2.0,>=1.24.0->fastmcp>=3.0.0->openenv-core>=0.2.3->openenv-legacy-cobol-submission==0.1.0)
+  Downloading pyjwt-2.12.1-py3-none-any.whl.metadata (4.1 kB)
+Collecting python-multipart>=0.0.9 (from mcp<2.0,>=1.24.0->fastmcp>=3.0.0->openenv-core>=0.2.3->openenv-legacy-cobol-submission==0.1.0)
+  Downloading python_multipart-0.0.26-py3-none-any.whl.metadata (2.1 kB)
+Collecting sse-starlette>=1.6.1 (from mcp<2.0,>=1.24.0->fastmcp>=3.0.0->openenv-core>=0.2.3->openenv-legacy-cobol-submission==0.1.0)
+  Downloading sse_starlette-3.3.4-py3-none-any.whl.metadata (14 kB)
+Collecting beartype>=0.20.0 (from py-key-value-aio<0.5.0,>=0.4.4->py-key-value-aio[filetree,keyring,memory]<0.5.0,>=0.4.4->fastmcp>=3.0.0->openenv-core>=0.2.3->openenv-legacy-cobol-submission==0.1.0)
+  Downloading beartype-0.22.9-py3-none-any.whl.metadata (37 kB)
+Collecting aiofile>=3.5.0 (from py-key-value-aio[filetree,keyring,memory]<0.5.0,>=0.4.4->fastmcp>=3.0.0->openenv-core>=0.2.3->openenv-legacy-cobol-submission==0.1.0)
+  Downloading aiofile-3.9.0-py3-none-any.whl.metadata (14 kB)
+Collecting keyring>=25.6.0 (from py-key-value-aio[filetree,keyring,memory]<0.5.0,>=0.4.4->fastmcp>=3.0.0->openenv-core>=0.2.3->openenv-legacy-cobol-submission==0.1.0)
+  Downloading keyring-25.7.0-py3-none-any.whl.metadata (21 kB)
+Collecting cachetools>=5.0.0 (from py-key-value-aio[filetree,keyring,memory]<0.5.0,>=0.4.4->fastmcp>=3.0.0->openenv-core>=0.2.3->openenv-legacy-cobol-submission==0.1.0)
+  Downloading cachetools-7.0.6-py3-none-any.whl.metadata (5.9 kB)
+Collecting caio<0.10.0,>=0.9.0 (from aiofile>=3.5.0->py-key-value-aio[filetree,keyring,memory]<0.5.0,>=0.4.4->fastmcp>=3.0.0->openenv-core>=0.2.3->openenv-legacy-cobol-submission==0.1.0)
+  Downloading caio-0.9.25-cp312-cp312-manylinux_2_34_x86_64.whl.metadata (3.3 kB)
+Collecting cryptography (from authlib>=1.6.5->fastmcp>=3.0.0->openenv-core>=0.2.3->openenv-legacy-cobol-submission==0.1.0)
+  Downloading cryptography-47.0.0-cp311-abi3-manylinux_2_34_x86_64.whl.metadata (4.5 kB)
+Collecting joserfc>=1.6.0 (from authlib>=1.6.5->fastmcp>=3.0.0->openenv-core>=0.2.3->openenv-legacy-cobol-submission==0.1.0)
+  Downloading joserfc-1.6.4-py3-none-any.whl.metadata (3.2 kB)
+Requirement already satisfied: attrs>=23.1.0 in /root/.cache/uv/archive-v0/_zCg95lZEBKJ9MwE5wW11/lib/python3.12/site-packages (from cyclopts>=4.0.0->fastmcp>=3.0.0->openenv-core>=0.2.3->openenv-legacy-cobol-submission==0.1.0) (26.1.0)
+Collecting docstring-parser<4.0,>=0.15 (from cyclopts>=4.0.0->fastmcp>=3.0.0->openenv-core>=0.2.3->openenv-legacy-cobol-submission==0.1.0)
+  Downloading docstring_parser-0.18.0-py3-none-any.whl.metadata (3.5 kB)
+Collecting rich-rst<2.0.0,>=1.3.1 (from cyclopts>=4.0.0->fastmcp>=3.0.0->openenv-core>=0.2.3->openenv-legacy-cobol-submission==0.1.0)
+  Downloading rich_rst-1.3.2-py3-none-any.whl.metadata (6.1 kB)
+Collecting docutils (from rich-rst<2.0.0,>=1.3.1->cyclopts>=4.0.0->fastmcp>=3.0.0->openenv-core>=0.2.3->openenv-legacy-cobol-submission==0.1.0)
+  Downloading docutils-0.22.4-py3-none-any.whl.metadata (15 kB)
+Collecting brotli>=1.1.0 (from gradio>=4.0.0->openenv-core>=0.2.3->openenv-legacy-cobol-submission==0.1.0)
+  Downloading brotli-1.2.0-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (6.1 kB)
+Collecting gradio-client==2.5.0 (from gradio>=4.0.0->openenv-core>=0.2.3->openenv-legacy-cobol-submission==0.1.0)
+  Downloading gradio_client-2.5.0-py3-none-any.whl.metadata (7.1 kB)
+Collecting groovy~=0.1 (from gradio>=4.0.0->openenv-core>=0.2.3->openenv-legacy-cobol-submission==0.1.0)
+  Downloading groovy-0.1.2-py3-none-any.whl.metadata (6.1 kB)
+Collecting hf-gradio<1.0,>=0.4.1 (from gradio>=4.0.0->openenv-core>=0.2.3->openenv-legacy-cobol-submission==0.1.0)
+  Downloading hf_gradio-0.4.1-py3-none-any.whl.metadata (428 bytes)
+Requirement already satisfied: jinja2<4.0 in /root/.cache/uv/archive-v0/_zCg95lZEBKJ9MwE5wW11/lib/python3.12/site-packages (from gradio>=4.0.0->openenv-core>=0.2.3->openenv-legacy-cobol-submission==0.1.0) (3.1.6)
+Requirement already satisfied: markupsafe<4.0,>=2.0 in /root/.cache/uv/archive-v0/_zCg95lZEBKJ9MwE5wW11/lib/python3.12/site-packages (from gradio>=4.0.0->openenv-core>=0.2.3->openenv-legacy-cobol-submission==0.1.0) (3.0.3)
+Requirement already satisfied: numpy<3.0,>=1.0 in /root/.cache/uv/archive-v0/_zCg95lZEBKJ9MwE5wW11/lib/python3.12/site-packages (from gradio>=4.0.0->openenv-core>=0.2.3->openenv-legacy-cobol-submission==0.1.0) (2.4.4)
+Collecting orjson~=3.0 (from gradio>=4.0.0->openenv-core>=0.2.3->openenv-legacy-cobol-submission==0.1.0)
+  Downloading orjson-3.11.8-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (41 kB)
+Requirement already satisfied: pandas<4.0,>=1.0 in /root/.cache/uv/archive-v0/_zCg95lZEBKJ9MwE5wW11/lib/python3.12/site-packages (from gradio>=4.0.0->openenv-core>=0.2.3->openenv-legacy-cobol-submission==0.1.0) (3.0.2)
+Requirement already satisfied: pillow<13.0,>=8.0 in /root/.cache/uv/archive-v0/_zCg95lZEBKJ9MwE5wW11/lib/python3.12/site-packages (from gradio>=4.0.0->openenv-core>=0.2.3->openenv-legacy-cobol-submission==0.1.0) (12.2.0)
+Collecting pydub<1.0 (from gradio>=4.0.0->openenv-core>=0.2.3->openenv-legacy-cobol-submission==0.1.0)
+  Downloading pydub-0.25.1-py2.py3-none-any.whl.metadata (1.4 kB)
+Collecting pytz>=2017.2 (from gradio>=4.0.0->openenv-core>=0.2.3->openenv-legacy-cobol-submission==0.1.0)
+  Downloading pytz-2026.1.post1-py2.py3-none-any.whl.metadata (22 kB)
+Collecting safehttpx<0.2.0,>=0.1.7 (from gradio>=4.0.0->openenv-core>=0.2.3->openenv-legacy-cobol-submission==0.1.0)
+  Downloading safehttpx-0.1.7-py3-none-any.whl.metadata (4.2 kB)
+Collecting semantic-version~=2.0 (from gradio>=4.0.0->openenv-core>=0.2.3->openenv-legacy-cobol-submission==0.1.0)
+  Downloading semantic_version-2.10.0-py2.py3-none-any.whl.metadata (9.7 kB)
+Collecting tomlkit<0.15.0,>=0.12.0 (from gradio>=4.0.0->openenv-core>=0.2.3->openenv-legacy-cobol-submission==0.1.0)
+  Downloading tomlkit-0.14.0-py3-none-any.whl.metadata (2.8 kB)
+Requirement already satisfied: python-dateutil>=2.8.2 in /root/.cache/uv/archive-v0/_zCg95lZEBKJ9MwE5wW11/lib/python3.12/site-packages (from pandas<4.0,>=1.0->gradio>=4.0.0->openenv-core>=0.2.3->openenv-legacy-cobol-submission==0.1.0) (2.9.0.post0)
+Requirement already satisfied: click>=8.2.1 in /root/.cache/uv/archive-v0/_zCg95lZEBKJ9MwE5wW11/lib/python3.12/site-packages (from typer->huggingface_hub>=1.0->openenv-legacy-cobol-submission==0.1.0) (8.3.3)
+Requirement already satisfied: shellingham>=1.3.0 in /root/.cache/uv/archive-v0/_zCg95lZEBKJ9MwE5wW11/lib/python3.12/site-packages (from typer->huggingface_hub>=1.0->openenv-legacy-cobol-submission==0.1.0) (1.5.4)
+Collecting cffi>=2.0.0 (from cryptography->authlib>=1.6.5->fastmcp>=3.0.0->openenv-core>=0.2.3->openenv-legacy-cobol-submission==0.1.0)
+  Downloading cffi-2.0.0-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (2.6 kB)
+Collecting pycparser (from cffi>=2.0.0->cryptography->authlib>=1.6.5->fastmcp>=3.0.0->openenv-core>=0.2.3->openenv-legacy-cobol-submission==0.1.0)
+  Downloading pycparser-3.0-py3-none-any.whl.metadata (8.2 kB)
+Collecting jsonschema-specifications>=2023.03.6 (from jsonschema>=4.20.0->mcp<2.0,>=1.24.0->fastmcp>=3.0.0->openenv-core>=0.2.3->openenv-legacy-cobol-submission==0.1.0)
+  Downloading jsonschema_specifications-2025.9.1-py3-none-any.whl.metadata (2.9 kB)
+Collecting referencing>=0.28.4 (from jsonschema>=4.20.0->mcp<2.0,>=1.24.0->fastmcp>=3.0.0->openenv-core>=0.2.3->openenv-legacy-cobol-submission==0.1.0)
+  Downloading referencing-0.37.0-py3-none-any.whl.metadata (2.8 kB)
+Collecting rpds-py>=0.25.0 (from jsonschema>=4.20.0->mcp<2.0,>=1.24.0->fastmcp>=3.0.0->openenv-core>=0.2.3->openenv-legacy-cobol-submission==0.1.0)
+  Downloading rpds_py-0.30.0-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (4.1 kB)
+Collecting pathable<0.6.0,>=0.5.0 (from jsonschema-path>=0.3.4->fastmcp>=3.0.0->openenv-core>=0.2.3->openenv-legacy-cobol-submission==0.1.0)
+  Downloading pathable-0.5.0-py3-none-any.whl.metadata (5.9 kB)
+Collecting SecretStorage>=3.2 (from keyring>=25.6.0->py-key-value-aio[filetree,keyring,memory]<0.5.0,>=0.4.4->fastmcp>=3.0.0->openenv-core>=0.2.3->openenv-legacy-cobol-submission==0.1.0)
+  Downloading secretstorage-3.5.0-py3-none-any.whl.metadata (4.0 kB)
+Collecting jeepney>=0.4.2 (from keyring>=25.6.0->py-key-value-aio[filetree,keyring,memory]<0.5.0,>=0.4.4->fastmcp>=3.0.0->openenv-core>=0.2.3->openenv-legacy-cobol-submission==0.1.0)
+  Downloading jeepney-0.9.0-py3-none-any.whl.metadata (1.2 kB)
+Collecting jaraco.classes (from keyring>=25.6.0->py-key-value-aio[filetree,keyring,memory]<0.5.0,>=0.4.4->fastmcp>=3.0.0->openenv-core>=0.2.3->openenv-legacy-cobol-submission==0.1.0)
+  Downloading jaraco.classes-3.4.0-py3-none-any.whl.metadata (2.6 kB)
+Collecting jaraco.functools (from keyring>=25.6.0->py-key-value-aio[filetree,keyring,memory]<0.5.0,>=0.4.4->fastmcp>=3.0.0->openenv-core>=0.2.3->openenv-legacy-cobol-submission==0.1.0)
+  Downloading jaraco_functools-4.4.0-py3-none-any.whl.metadata (3.0 kB)
+Collecting jaraco.context (from keyring>=25.6.0->py-key-value-aio[filetree,keyring,memory]<0.5.0,>=0.4.4->fastmcp>=3.0.0->openenv-core>=0.2.3->openenv-legacy-cobol-submission==0.1.0)
+  Downloading jaraco_context-6.1.2-py3-none-any.whl.metadata (4.2 kB)
+Collecting importlib-metadata<8.8.0,>=6.0 (from opentelemetry-api>=1.20.0->fastmcp>=3.0.0->openenv-core>=0.2.3->openenv-legacy-cobol-submission==0.1.0)
+  Downloading importlib_metadata-8.7.1-py3-none-any.whl.metadata (4.7 kB)
+Collecting zipp>=3.20 (from importlib-metadata<8.8.0,>=6.0->opentelemetry-api>=1.20.0->fastmcp>=3.0.0->openenv-core>=0.2.3->openenv-legacy-cobol-submission==0.1.0)
+  Downloading zipp-3.23.1-py3-none-any.whl.metadata (3.6 kB)
+Collecting email-validator>=2.0.0 (from pydantic[email]>=2.11.7->fastmcp>=3.0.0->openenv-core>=0.2.3->openenv-legacy-cobol-submission==0.1.0)
+  Downloading email_validator-2.3.0-py3-none-any.whl.metadata (26 kB)
+Collecting dnspython>=2.0.0 (from email-validator>=2.0.0->pydantic[email]>=2.11.7->fastmcp>=3.0.0->openenv-core>=0.2.3->openenv-legacy-cobol-submission==0.1.0)
+  Downloading dnspython-2.8.0-py3-none-any.whl.metadata (5.7 kB)
+Requirement already satisfied: six>=1.5 in /root/.cache/uv/archive-v0/_zCg95lZEBKJ9MwE5wW11/lib/python3.12/site-packages (from python-dateutil>=2.8.2->pandas<4.0,>=1.0->gradio>=4.0.0->openenv-core>=0.2.3->openenv-legacy-cobol-submission==0.1.0) (1.17.0)
+Requirement already satisfied: charset_normalizer<4,>=2 in /root/.cache/uv/archive-v0/_zCg95lZEBKJ9MwE5wW11/lib/python3.12/site-packages (from requests>=2.25.0->openenv-core>=0.2.3->openenv-legacy-cobol-submission==0.1.0) (3.4.7)
+Requirement already satisfied: urllib3<3,>=1.26 in /root/.cache/uv/archive-v0/_zCg95lZEBKJ9MwE5wW11/lib/python3.12/site-packages (from requests>=2.25.0->openenv-core>=0.2.3->openenv-legacy-cobol-submission==0.1.0) (2.6.3)
+Requirement already satisfied: markdown-it-py>=2.2.0 in /root/.cache/uv/archive-v0/_zCg95lZEBKJ9MwE5wW11/lib/python3.12/site-packages (from rich>=13.0.0->openenv-core>=0.2.3->openenv-legacy-cobol-submission==0.1.0) (4.0.0)
+Requirement already satisfied: pygments<3.0.0,>=2.13.0 in /root/.cache/uv/archive-v0/_zCg95lZEBKJ9MwE5wW11/lib/python3.12/site-packages (from rich>=13.0.0->openenv-core>=0.2.3->openenv-legacy-cobol-submission==0.1.0) (2.20.0)
+Requirement already satisfied: mdurl~=0.1 in /root/.cache/uv/archive-v0/_zCg95lZEBKJ9MwE5wW11/lib/python3.12/site-packages (from markdown-it-py>=2.2.0->rich>=13.0.0->openenv-core>=0.2.3->openenv-legacy-cobol-submission==0.1.0) (0.1.2)
+Collecting more-itertools (from jaraco.classes->keyring>=25.6.0->py-key-value-aio[filetree,keyring,memory]<0.5.0,>=0.4.4->fastmcp>=3.0.0->openenv-core>=0.2.3->openenv-legacy-cobol-submission==0.1.0)
+  Downloading more_itertools-11.0.2-py3-none-any.whl.metadata (41 kB)
+Downloading openai-2.32.0-py3-none-any.whl (1.2 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.2/1.2 MB 189.5 MB/s  0:00:00
+Downloading distro-1.9.0-py3-none-any.whl (20 kB)
+Downloading jiter-0.14.0-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (353 kB)
+Downloading pydantic-2.13.3-py3-none-any.whl (471 kB)
+Downloading pydantic_core-2.46.3-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (2.1 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.1/2.1 MB 139.5 MB/s  0:00:00
+Downloading annotated_types-0.7.0-py3-none-any.whl (13 kB)
+Downloading openenv_core-0.2.3-py3-none-any.whl (174 kB)
+Downloading fastapi-0.136.1-py3-none-any.whl (117 kB)
+Downloading fastmcp-3.2.4-py3-none-any.whl (728 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 728.6/728.6 kB 150.8 MB/s  0:00:00
+Downloading mcp-1.27.0-py3-none-any.whl (215 kB)
+Downloading py_key_value_aio-0.4.4-py3-none-any.whl (152 kB)
+Downloading aiofile-3.9.0-py3-none-any.whl (19 kB)
+Downloading caio-0.9.25-cp312-cp312-manylinux_2_34_x86_64.whl (80 kB)
+Downloading authlib-1.7.0-py2.py3-none-any.whl (258 kB)
+Downloading beartype-0.22.9-py3-none-any.whl (1.3 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.3/1.3 MB 319.7 MB/s  0:00:00
+Downloading cachetools-7.0.6-py3-none-any.whl (13 kB)
+Downloading cyclopts-4.11.0-py3-none-any.whl (208 kB)
+Downloading docstring_parser-0.18.0-py3-none-any.whl (22 kB)
+Downloading rich_rst-1.3.2-py3-none-any.whl (12 kB)
+Downloading exceptiongroup-1.3.1-py3-none-any.whl (16 kB)
+Downloading gradio-6.13.0-py3-none-any.whl (19.7 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 19.7/19.7 MB 279.0 MB/s  0:00:00
+Downloading gradio_client-2.5.0-py3-none-any.whl (59 kB)
+Downloading groovy-0.1.2-py3-none-any.whl (14 kB)
+Downloading hf_gradio-0.4.1-py3-none-any.whl (4.5 kB)
+Downloading orjson-3.11.8-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (133 kB)
+Downloading pydub-0.25.1-py2.py3-none-any.whl (32 kB)
+Downloading python_multipart-0.0.26-py3-none-any.whl (28 kB)
+Downloading safehttpx-0.1.7-py3-none-any.whl (9.0 kB)
+Downloading semantic_version-2.10.0-py2.py3-none-any.whl (15 kB)
+Downloading starlette-1.0.0-py3-none-any.whl (72 kB)
+Downloading tomlkit-0.14.0-py3-none-any.whl (39 kB)
+Downloading brotli-1.2.0-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (1.4 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.4/1.4 MB 224.7 MB/s  0:00:00
+Downloading griffelib-2.0.2-py3-none-any.whl (142 kB)
+Downloading httpx_sse-0.4.3-py3-none-any.whl (9.0 kB)
+Downloading joserfc-1.6.4-py3-none-any.whl (70 kB)
+Downloading cryptography-47.0.0-cp311-abi3-manylinux_2_34_x86_64.whl (4.7 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.7/4.7 MB 360.4 MB/s  0:00:00
+Downloading cffi-2.0.0-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (219 kB)
+Downloading jsonref-1.1.0-py3-none-any.whl (9.4 kB)
+Downloading jsonschema-4.26.0-py3-none-any.whl (90 kB)
+Downloading jsonschema_path-0.4.5-py3-none-any.whl (19 kB)
+Downloading pathable-0.5.0-py3-none-any.whl (16 kB)
+Downloading referencing-0.37.0-py3-none-any.whl (26 kB)
+Downloading jsonschema_specifications-2025.9.1-py3-none-any.whl (18 kB)
+Downloading keyring-25.7.0-py3-none-any.whl (39 kB)
+Downloading jeepney-0.9.0-py3-none-any.whl (49 kB)
+Downloading openapi_pydantic-0.5.1-py3-none-any.whl (96 kB)
+Downloading opentelemetry_api-1.41.1-py3-none-any.whl (69 kB)
+Downloading importlib_metadata-8.7.1-py3-none-any.whl (27 kB)
+Downloading platformdirs-4.9.6-py3-none-any.whl (21 kB)
+Downloading pydantic_settings-2.14.0-py3-none-any.whl (60 kB)
+Downloading email_validator-2.3.0-py3-none-any.whl (35 kB)
+Downloading dnspython-2.8.0-py3-none-any.whl (331 kB)
+Downloading pyjwt-2.12.1-py3-none-any.whl (29 kB)
+Downloading pyperclip-1.11.0-py3-none-any.whl (11 kB)
+Downloading python_dotenv-1.2.2-py3-none-any.whl (22 kB)
+Downloading pytz-2026.1.post1-py2.py3-none-any.whl (510 kB)
+Downloading rpds_py-0.30.0-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (394 kB)
+Downloading secretstorage-3.5.0-py3-none-any.whl (15 kB)
+Downloading sse_starlette-3.3.4-py3-none-any.whl (14 kB)
+Downloading tomli-2.4.1-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (253 kB)
+Downloading tomli_w-1.2.0-py3-none-any.whl (6.7 kB)
+Downloading typing_inspection-0.4.2-py3-none-any.whl (14 kB)
+Downloading uncalled_for-0.3.1-py3-none-any.whl (11 kB)
+Downloading uvicorn-0.46.0-py3-none-any.whl (70 kB)
+Downloading watchfiles-1.1.1-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (456 kB)
+Downloading websockets-16.0-cp312-cp312-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl (184 kB)
+Downloading zipp-3.23.1-py3-none-any.whl (10 kB)
+Downloading docutils-0.22.4-py3-none-any.whl (633 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 633.2/633.2 kB 180.9 MB/s  0:00:00
+Downloading jaraco.classes-3.4.0-py3-none-any.whl (6.8 kB)
+Downloading jaraco_context-6.1.2-py3-none-any.whl (7.9 kB)
+Downloading jaraco_functools-4.4.0-py3-none-any.whl (10 kB)
+Downloading more_itertools-11.0.2-py3-none-any.whl (71 kB)
+Downloading pycparser-3.0-py3-none-any.whl (48 kB)
+Downloading sniffio-1.3.1-py3-none-any.whl (10 kB)
+Building wheels for collected packages: openenv-legacy-cobol-submission
+  Building editable for openenv-legacy-cobol-submission (pyproject.toml): started
+  Building editable for openenv-legacy-cobol-submission (pyproject.toml): finished with status 'done'
+  Created wheel for openenv-legacy-cobol-submission: filename=openenv_legacy_cobol_submission-0.1.0-0.editable-py3-none-any.whl size=3473 sha256=9b4383c97de11d7e09ec00b3ef1baa48d457bd698dde2a5dadcf518844ea25b3
+  Stored in directory: /tmp/pip-ephem-wheel-cache-v0kbbpbx/wheels/7e/65/79/e562943dc6d9280fcc9daecb6a70ad61c29c4a1c92d641e1e1
+Successfully built openenv-legacy-cobol-submission
+Installing collected packages: pytz, pyperclip, pydub, brotli, zipp, websockets, uvicorn, uncalled-for, typing-inspection, tomlkit, tomli-w, tomli, sniffio, semantic-version, rpds-py, python-multipart, python-dotenv, pyjwt, pydantic-core, pycparser, platformdirs, pathable, orjson, more-itertools, jsonref, jiter, jeepney, jaraco.context, httpx-sse, groovy, griffelib, exceptiongroup, docutils, docstring-parser, dnspython, distro, caio, cachetools, beartype, annotated-types, watchfiles, starlette, referencing, pydantic, py-key-value-aio, jaraco.functools, jaraco.classes, importlib-metadata, email-validator, cffi, aiofile, sse-starlette, safehttpx, rich-rst, pydantic-settings, opentelemetry-api, openapi-pydantic, openai, jsonschema-specifications, jsonschema-path, fastapi, cryptography, SecretStorage, jsonschema, joserfc, cyclopts, mcp, keyring, gradio-client, authlib, hf-gradio, gradio, fastmcp, openenv-core, openenv-legacy-cobol-submission
+
+Successfully installed SecretStorage-3.5.0 aiofile-3.9.0 annotated-types-0.7.0 authlib-1.7.0 beartype-0.22.9 brotli-1.2.0 cachetools-7.0.6 caio-0.9.25 cffi-2.0.0 cryptography-47.0.0 cyclopts-4.11.0 distro-1.9.0 dnspython-2.8.0 docstring-parser-0.18.0 docutils-0.22.4 email-validator-2.3.0 exceptiongroup-1.3.1 fastapi-0.136.1 fastmcp-3.2.4 gradio-6.13.0 gradio-client-2.5.0 griffelib-2.0.2 groovy-0.1.2 hf-gradio-0.4.1 httpx-sse-0.4.3 importlib-metadata-8.7.1 jaraco.classes-3.4.0 jaraco.context-6.1.2 jaraco.functools-4.4.0 jeepney-0.9.0 jiter-0.14.0 joserfc-1.6.4 jsonref-1.1.0 jsonschema-4.26.0 jsonschema-path-0.4.5 jsonschema-specifications-2025.9.1 keyring-25.7.0 mcp-1.27.0 more-itertools-11.0.2 openai-2.32.0 openapi-pydantic-0.5.1 openenv-core-0.2.3 openenv-legacy-cobol-submission-0.1.0 opentelemetry-api-1.41.1 orjson-3.11.8 pathable-0.5.0 platformdirs-4.9.6 py-key-value-aio-0.4.4 pycparser-3.0 pydantic-2.13.3 pydantic-core-2.46.3 pydantic-settings-2.14.0 pydub-0.25.1 pyjwt-2.12.1 pyperclip-1.11.0 python-dotenv-1.2.2 python-multipart-0.0.26 pytz-2026.1.post1 referencing-0.37.0 rich-rst-1.3.2 rpds-py-0.30.0 safehttpx-0.1.7 semantic-version-2.10.0 sniffio-1.3.1 sse-starlette-3.3.4 starlette-1.0.0 tomli-2.4.1 tomli-w-1.2.0 tomlkit-0.14.0 typing-inspection-0.4.2 uncalled-for-0.3.1 uvicorn-0.46.0 watchfiles-1.1.1 websockets-16.0 zipp-3.23.1
+$ /root/.cache/uv/builds-v0/.tmpQi62S5/bin/python -m legacy_cobol_env.training.build_sft_dataset
+wrote 15 examples to /tmp/cobol-modernization-openenv/legacy_cobol_env/outputs/training/oracle_sft.jsonl
+$ /root/.cache/uv/builds-v0/.tmpQi62S5/bin/python -m legacy_cobol_env.eval.run_model_rollouts --provider local-transformers --max-repairs 2 --output legacy_cobol_env/outputs/evals/base_local_qwen3_14b_all_tasks.json
+
+config.json:   0%|          | 0.00/728 [00:00<?, ?B/s][Aconfig.json: 100%|██████████| 728/728 [00:00<00:00, 2.19MB/s]
+
+tokenizer_config.json:   0%|          | 0.00/9.73k [00:00<?, ?B/s][Atokenizer_config.json: 100%|██████████| 9.73k/9.73k [00:00<00:00, 45.1MB/s]
+
+vocab.json:   0%|          | 0.00/2.78M [00:00<?, ?B/s][Avocab.json: 100%|██████████| 2.78M/2.78M [00:00<00:00, 161MB/s]
+
+merges.txt:   0%|          | 0.00/1.67M [00:00<?, ?B/s][Amerges.txt: 100%|██████████| 1.67M/1.67M [00:00<00:00, 56.2MB/s]
+
+tokenizer.json:   0%|          | 0.00/11.4M [00:00<?, ?B/s][Atokenizer.json: 100%|██████████| 11.4M/11.4M [00:00<00:00, 51.8MB/s]
+
+model.safetensors.index.json:   0%|          | 0.00/36.5k [00:00<?, ?B/s][Amodel.safetensors.index.json: 100%|██████████| 36.5k/36.5k [00:00<00:00, 86.3MB/s]
+
+Downloading (incomplete total...): 0.00B [00:00, ?B/s][A
+Fetching 8 files:   0%|          | 0/8 [00:00<?, ?it/s][A
+Downloading (incomplete total...):   0%|          | 0.00/3.84G [00:00<?, ?B/s][A
+Downloading (incomplete total...):   0%|          | 0.00/7.81G [00:00<?, ?B/s][A
+Downloading (incomplete total...):   0%|          | 0.00/9.72G [00:00<?, ?B/s][A
+Downloading (incomplete total...):   0%|          | 0.00/17.6G [00:00<?, ?B/s][A
+Downloading (incomplete total...):   0%|          | 0.00/21.6G [00:00<?, ?B/s][A
+Downloading (incomplete total...):   0%|          | 0.00/25.6G [00:00<?, ?B/s][A
+Downloading (incomplete total...):   0%|          | 0.00/25.6G [00:00<?, ?B/s][A
+Downloading (incomplete total...):   0%|          | 0.00/29.5G [00:00<?, ?B/s][A
+Downloading (incomplete total...):   0%|          | 63.0M/29.5G [00:01<07:58, 61.6MB/s][A
+Downloading (incomplete total...):   4%|▎         | 1.06G/29.5G [00:02<00:47, 602MB/s] [A
+Downloading (incomplete total...):   6%|▌         | 1.81G/29.5G [00:03<00:41, 670MB/s][A
+Downloading (incomplete total...):   6%|▌         | 1.81G/29.5G [00:03<00:40, 682MB/s][A
+Downloading (incomplete total...):   6%|▌         | 1.81G/29.5G [00:03<00:40, 682MB/s][A
+Downloading (incomplete total...):   9%|▉         | 2.65G/29.5G [00:04<00:39, 685MB/s][A
+Downloading (incomplete total...):  12%|█▏        | 3.52G/29.5G [00:06<00:52, 500MB/s][A
+Downloading (incomplete total...):  15%|█▍        | 4.33G/29.5G [00:07<00:44, 569MB/s][A
+Downloading (incomplete total...):  18%|█▊        | 5.26G/29.5G [00:10<00:48, 495MB/s][A
+Downloading (incomplete total...):  23%|██▎       | 6.67G/29.5G [00:11<00:34, 664MB/s][A
+Downloading (incomplete total...):  25%|██▌       | 7.48G/29.5G [00:12<00:34, 640MB/s][A
+Downloading (incomplete total...):  32%|███▏      | 9.55G/29.5G [00:13<00:20, 962MB/s][A
+Downloading (incomplete total...):  36%|███▋      | 10.8G/29.5G [00:14<00:18, 1.02GB/s][A
+Downloading (incomplete total...):  40%|████      | 11.9G/29.5G [00:22<00:45, 388MB/s] [A
+Downloading (incomplete total...):  40%|████      | 11.9G/29.5G [00:22<01:05, 268MB/s][A
+Downloading (incomplete total...):  43%|████▎     | 12.8G/29.5G [00:31<01:28, 189MB/s][A
+Downloading (incomplete total...):  43%|████▎     | 12.8G/29.5G [00:31<02:06, 132MB/s][A
+Downloading (incomplete total...):  43%|████▎     | 12.8G/29.5G [00:31<02:06, 132MB/s][A
+Downloading (incomplete total...):  45%|████▍     | 13.3G/29.5G [00:33<01:54, 142MB/s][A
+Downloading (incomplete total...):  47%|████▋     | 14.0G/29.5G [00:34<01:24, 183MB/s][A
+Downloading (incomplete total...):  50%|█████     | 14.9G/29.5G [00:39<01:18, 187MB/s][A
+Downloading (incomplete total...):  52%|█████▏    | 15.4G/29.5G [00:43<01:24, 168MB/s][A
+Downloading (incomplete total...):  54%|█████▍    | 15.9G/29.5G [00:48<01:37, 140MB/s][A
+Downloading (incomplete total...):  55%|█████▌    | 16.3G/29.5G [00:49<01:21, 163MB/s][A
+Downloading (incomplete total...):  56%|█████▋    | 16.7G/29.5G [00:51<01:13, 174MB/s][A
+Downloading (incomplete total...):  57%|█████▋    | 16.9G/29.5G [00:54<01:26, 145MB/s][A
+Downloading (incomplete total...):  58%|█████▊    | 17.2G/29.5G [00:55<00:58, 210MB/s][A
+Downloading (incomplete total...):  58%|█████▊    | 17.2G/29.5G [00:55<00:58, 210MB/s][A
+Downloading (incomplete total...):  58%|█████▊    | 17.2G/29.5G [00:55<00:58, 210MB/s][A
+Downloading (incomplete total...):  63%|██████▎   | 18.5G/29.5G [01:00<00:45, 240MB/s][A
+Downloading (incomplete total...):  65%|██████▍   | 19.1G/29.5G [01:01<00:36, 284MB/s][A
+Downloading (incomplete total...):  65%|██████▍   | 19.1G/29.5G [01:01<00:31, 329MB/s][A
+Downloading (incomplete total...):  67%|██████▋   | 19.8G/29.5G [01:04<00:31, 306MB/s][A
+Downloading (incomplete total...):  68%|██████▊   | 20.2G/29.5G [01:06<00:38, 240MB/s][A
+Downloading (incomplete total...):  68%|██████▊   | 20.2G/29.5G [01:06<00:38, 240MB/s][A
+Downloading (incomplete total...):  68%|██████▊   | 20.2G/29.5G [01:06<00:38, 240MB/s][A
+Downloading (incomplete total...):  72%|███████▏  | 21.2G/29.5G [01:07<00:23, 354MB/s][A
+Downloading (incomplete total...):  74%|███████▎  | 21.7G/29.5G [01:18<00:58, 132MB/s][A
+Downloading (incomplete total...):  75%|███████▌  | 22.2G/29.5G [01:19<00:45, 161MB/s][A
+Downloading (incomplete total...):  77%|███████▋  | 22.7G/29.5G [01:21<00:39, 172MB/s][A
+Downloading (incomplete total...):  79%|███████▊  | 23.2G/29.5G [01:22<00:30, 210MB/s][A
+Downloading (incomplete total...):  82%|████████▏ | 24.3G/29.5G [01:27<00:23, 218MB/s][A
+Downloading (incomplete total...):  82%|████████▏ | 24.3G/29.5G [01:27<00:23, 218MB/s][A
+Downloading (incomplete total...):  85%|████████▍ | 25.0G/29.5G [01:36<00:29, 154MB/s][A
+Downloading (incomplete total...):  86%|████████▌ | 25.4G/29.5G [01:37<00:25, 165MB/s][A
+Downloading (incomplete total...):  89%|████████▊ | 26.2G/29.5G [01:38<00:15, 225MB/s][A
+Downloading (incomplete total...):  91%|█████████ | 26.8G/29.5G [01:39<00:08, 318MB/s][A
+Downloading (incomplete total...):  91%|█████████ | 26.8G/29.5G [01:39<00:08, 318MB/s][A
+Fetching 8 files:  12%|█▎        | 1/8 [01:40<11:42, 100.42s/it][A
+Downloading (incomplete total...):  94%|█████████▍| 27.7G/29.5G [01:40<00:04, 431MB/s][A
+Downloading (incomplete total...):  97%|█████████▋| 28.6G/29.5G [01:45<00:03, 286MB/s][A
+Fetching 8 files:  25%|██▌       | 2/8 [01:46<04:28, 44.81s/it] [AFetching 8 files: 100%|██████████| 8/8 [01:46<00:00, 13.29s/it]
+
+Download complete: 100%|██████████| 29.5G/29.5G [01:46<00:00, 286MB/s]                [ADownload complete: 100%|██████████| 29.5G/29.5G [01:46<00:00, 278MB/s]
+
+Loading weights:   0%|          | 0/443 [00:00<?, ?it/s][A
+Loading weights:   0%|          | 1/443 [00:02<19:34,  2.66s/it][A
+Loading weights:   0%|          | 2/443 [00:05<21:52,  2.98s/it][A
+Loading weights:  11%|█         | 48/443 [00:07<00:41,  9.49it/s][A
+Loading weights:  14%|█▍        | 63/443 [00:08<00:38,  9.82it/s][A
+Loading weights:  26%|██▌       | 116/443 [00:10<00:18, 18.09it/s][A
+Loading weights:  31%|███▏      | 139/443 [00:11<00:17, 17.61it/s][A
+Loading weights:  41%|████      | 180/443 [00:12<00:12, 21.43it/s][A
+Loading weights:  46%|████▌     | 204/443 [00:15<00:14, 16.24it/s][A
+Loading weights:  56%|█████▌    | 246/443 [00:16<00:09, 20.09it/s][A
+Loading weights:  61%|██████    | 270/443 [00:19<00:11, 15.12it/s][A
+Loading weights:  70%|███████   | 312/443 [00:20<00:06, 19.34it/s][A
+Loading weights:  76%|███████▌  | 336/443 [00:24<00:07, 13.55it/s][A
+Loading weights:  85%|████████▌ | 378/443 [00:25<00:03, 17.04it/s][A
+Loading weights:  91%|█████████ | 401/443 [00:29<00:03, 11.85it/s][A
+Loading weights:  95%|█████████▍| 419/443 [00:31<00:02, 10.45it/s][A
+Loading weights:  98%|█████████▊| 434/443 [00:33<00:00, 10.30it/s][ALoading weights: 100%|██████████| 443/443 [00:34<00:00, 13.02it/s]
+
+generation_config.json:   0%|          | 0.00/239 [00:00<?, ?B/s][Ageneration_config.json: 100%|██████████| 239/239 [00:00<00:00, 625kB/s]
+/root/.cache/uv/archive-v0/_zCg95lZEBKJ9MwE5wW11/lib/python3.12/site-packages/bitsandbytes/backends/cuda/ops.py:468: FutureWarning: _check_is_size will be removed in a future PyTorch release along with guard_size_oblivious.     Use _check(i >= 0) instead.
+  torch._check_is_size(blocksize)
+/root/.cache/uv/archive-v0/_zCg95lZEBKJ9MwE5wW11/lib/python3.12/site-packages/bitsandbytes/backends/cuda/ops.py:468: FutureWarning: _check_is_size will be removed in a future PyTorch release along with guard_size_oblivious.     Use _check(i >= 0) instead.
+  torch._check_is_size(blocksize)
+
+Loading weights:   0%|          | 0/443 [00:00<?, ?it/s][A
+Loading weights:  28%|██▊       | 125/443 [00:01<00:02, 123.17it/s][A
+Loading weights:  68%|██████▊   | 302/443 [00:02<00:00, 153.74it/s][ALoading weights: 100%|██████████| 443/443 [00:02<00:00, 158.13it/s]
+/root/.cache/uv/archive-v0/_zCg95lZEBKJ9MwE5wW11/lib/python3.12/site-packages/bitsandbytes/backends/cuda/ops.py:468: FutureWarning: _check_is_size will be removed in a future PyTorch release along with guard_size_oblivious.     Use _check(i >= 0) instead.
+  torch._check_is_size(blocksize)
+/root/.cache/uv/archive-v0/_zCg95lZEBKJ9MwE5wW11/lib/python3.12/site-packages/bitsandbytes/backends/cuda/ops.py:468: FutureWarning: _check_is_size will be removed in a future PyTorch release along with guard_size_oblivious.     Use _check(i >= 0) instead.
+  torch._check_is_size(blocksize)
+/root/.cache/uv/archive-v0/_zCg95lZEBKJ9MwE5wW11/lib/python3.12/site-packages/bitsandbytes/backends/cuda/ops.py:468: FutureWarning: _check_is_size will be removed in a future PyTorch release along with guard_size_oblivious.     Use _check(i >= 0) instead.
+  torch._check_is_size(blocksize)
+
+Loading weights:   0%|          | 0/443 [00:00<?, ?it/s][A
+Loading weights:  29%|██▊       | 127/443 [00:01<00:02, 126.70it/s][A
+Loading weights:  68%|██████▊   | 303/443 [00:02<00:00, 154.48it/s][ALoading weights: 100%|██████████| 443/443 [00:02<00:00, 159.65it/s]
+/root/.cache/uv/archive-v0/_zCg95lZEBKJ9MwE5wW11/lib/python3.12/site-packages/bitsandbytes/backends/cuda/ops.py:468: FutureWarning: _check_is_size will be removed in a future PyTorch release along with guard_size_oblivious.     Use _check(i >= 0) instead.
+  torch._check_is_size(blocksize)
+
+Loading weights:   0%|          | 0/443 [00:00<?, ?it/s][A
+Loading weights:  29%|██▊       | 127/443 [00:01<00:02, 125.97it/s][A
+Loading weights:  68%|██████▊   | 303/443 [00:02<00:00, 154.39it/s][ALoading weights: 100%|██████████| 443/443 [00:02<00:00, 159.44it/s]
+/root/.cache/uv/archive-v0/_zCg95lZEBKJ9MwE5wW11/lib/python3.12/site-packages/bitsandbytes/backends/cuda/ops.py:468: FutureWarning: _check_is_size will be removed in a future PyTorch release along with guard_size_oblivious.     Use _check(i >= 0) instead.
+  torch._check_is_size(blocksize)
+
+Loading weights:   0%|          | 0/443 [00:00<?, ?it/s][A
+Loading weights:  29%|██▊       | 127/443 [00:01<00:02, 125.94it/s][A
+Loading weights:  68%|██████▊   | 303/443 [00:02<00:00, 154.75it/s][ALoading weights: 100%|██████████| 443/443 [00:02<00:00, 159.41it/s]
+/root/.cache/uv/archive-v0/_zCg95lZEBKJ9MwE5wW11/lib/python3.12/site-packages/bitsandbytes/backends/cuda/ops.py:468: FutureWarning: _check_is_size will be removed in a future PyTorch release along with guard_size_oblivious.     Use _check(i >= 0) instead.
+  torch._check_is_size(blocksize)
+/root/.cache/uv/archive-v0/_zCg95lZEBKJ9MwE5wW11/lib/python3.12/site-packages/bitsandbytes/backends/cuda/ops.py:468: FutureWarning: _check_is_size will be removed in a future PyTorch release along with guard_size_oblivious.     Use _check(i >= 0) instead.
+  torch._check_is_size(blocksize)
+/root/.cache/uv/archive-v0/_zCg95lZEBKJ9MwE5wW11/lib/python3.12/site-packages/bitsandbytes/backends/cuda/ops.py:468: FutureWarning: _check_is_size will be removed in a future PyTorch release along with guard_size_oblivious.     Use _check(i >= 0) instead.
+  torch._check_is_size(blocksize)
+
+Loading weights:   0%|          | 0/443 [00:00<?, ?it/s][A
+Loading weights:  29%|██▊       | 127/443 [00:01<00:02, 126.49it/s][A
+Loading weights:  70%|███████   | 312/443 [00:02<00:00, 159.50it/s][ALoading weights: 100%|██████████| 443/443 [00:02<00:00, 161.25it/s]
+/root/.cache/uv/archive-v0/_zCg95lZEBKJ9MwE5wW11/lib/python3.12/site-packages/bitsandbytes/backends/cuda/ops.py:468: FutureWarning: _check_is_size will be removed in a future PyTorch release along with guard_size_oblivious.     Use _check(i >= 0) instead.
+  torch._check_is_size(blocksize)
+/root/.cache/uv/archive-v0/_zCg95lZEBKJ9MwE5wW11/lib/python3.12/site-packages/bitsandbytes/backends/cuda/ops.py:468: FutureWarning: _check_is_size will be removed in a future PyTorch release along with guard_size_oblivious.     Use _check(i >= 0) instead.
+  torch._check_is_size(blocksize)
+/root/.cache/uv/archive-v0/_zCg95lZEBKJ9MwE5wW11/lib/python3.12/site-packages/bitsandbytes/backends/cuda/ops.py:468: FutureWarning: _check_is_size will be removed in a future PyTorch release along with guard_size_oblivious.     Use _check(i >= 0) instead.
+  torch._check_is_size(blocksize)
+{
+  "provider": "local-transformers",
+  "task_count": 6,
+  "mean_public_score": 0.714,
+  "accepted_count": 3
+}
+$ /root/.cache/uv/builds-v0/.tmpQi62S5/bin/python -m legacy_cobol_env.training.train_sft --model-name Qwen/Qwen3-14B --max-seq-length 2048 --num-train-epochs 5 --gradient-accumulation-steps 4 --lora-rank 16 --lora-alpha 32 --output-dir legacy_cobol_env/outputs/training/sft-qwen3-14b-clean
+
+Loading weights:   0%|          | 0/443 [00:00<?, ?it/s][A
+Loading weights:  28%|██▊       | 125/443 [00:01<00:02, 124.44it/s][A
+Loading weights:  68%|██████▊   | 303/443 [00:02<00:00, 154.50it/s][ALoading weights: 100%|██████████| 443/443 [00:02<00:00, 159.37it/s]
+
+Generating train split: 0 examples [00:00, ? examples/s][AGenerating train split: 15 examples [00:00, 4098.94 examples/s]
+
+Applying formatting function to train dataset:   0%|          | 0/15 [00:00<?, ? examples/s][AApplying formatting function to train dataset: 100%|██████████| 15/15 [00:00<00:00, 587.85 examples/s]
+
+Tokenizing train dataset:   0%|          | 0/15 [00:00<?, ? examples/s][ATokenizing train dataset: 100%|██████████| 15/15 [00:00<00:00, 232.33 examples/s]
+{
+  "sft_plan": {
+    "dataset": "legacy_cobol_env/outputs/training/oracle_sft.jsonl",
+    "output_dir": "legacy_cobol_env/outputs/training/sft-qwen3-14b-clean",
+    "model_name": "Qwen/Qwen3-14B",
+    "max_seq_length": 2048,
+    "num_train_epochs": 5.0,
+    "learning_rate": 0.0002,
+    "per_device_train_batch_size": 1,
+    "gradient_accumulation_steps": 4,
+    "lora_rank": 16,
+    "lora_alpha": 32,
+    "lora_dropout": 0.05,
+    "load_in_4bit": true,
+    "bf16": true,
+    "dataset_examples": 15,
+    "families": [
+      "account_status_level88",
+      "claims_eligibility_branching",
+      "date_normalization",
+      "decimal_copybook_payroll",
+      "fixed_width_customer",
+      "invoice_occurs_totals"
+    ],
+    "uses_lora": true,
+    "training_dependencies": [
+      "torch",
+      "transformers",
+      "datasets",
+      "peft",
+      "trl",
+      "accelerate"
+    ]
+  }
+}
+[transformers] The tokenizer has new PAD/BOS/EOS tokens that differ from the model config and generation config. The model config and generation config were aligned accordingly, being updated with the tokenizer's values. Updated tokens: {'bos_token_id': None, 'pad_token_id': 151643}.
+
+  0%|          | 0/20 [00:00<?, ?it/s][A
+  5%|▌         | 1/20 [00:06<02:07,  6.73s/it][A
+                                              [A
+{'loss': '1.135', 'grad_norm': '0.5547', 'learning_rate': '0.0002', 'entropy': '0.5034', 'num_tokens': '8192', 'mean_token_accuracy': '0.7938', 'epoch': '0.2667'}
+  5%|▌         | 1/20 [00:06<02:07,  6.73s/it][A
+ 10%|█         | 2/20 [00:12<01:48,  6.04s/it][A
+                                              [A
+{'loss': '1.044', 'grad_norm': '0.5586', 'learning_rate': '0.00019', 'entropy': '0.4721', 'num_tokens': '1.534e+04', 'mean_token_accuracy': '0.812', 'epoch': '0.5333'}
+ 10%|█         | 2/20 [00:12<01:48,  6.04s/it][A
+ 15%|█▌        | 3/20 [00:17<01:38,  5.79s/it][A
+{'loss': '0.8919', 'grad_norm': '0.5039', 'learning_rate': '0.00018', 'entropy': '0.5121', 'num_tokens': '2.241e+04', 'mean_token_accuracy': '0.8255', 'epoch': '0.8'}
+                                              [A
+ 15%|█▌        | 3/20 [00:17<01:38,  5.79s/it][A
+ 20%|██        | 4/20 [00:22<01:27,  5.45s/it][A
+{'loss': '0.8053', 'grad_norm': '0.2988', 'learning_rate': '0.00017', 'entropy': '0.6193', 'num_tokens': '2.855e+04', 'mean_token_accuracy': '0.8334', 'epoch': '1'}
+                                              [A
+ 20%|██        | 4/20 [00:22<01:27,  5.45s/it][A
+ 25%|██▌       | 5/20 [00:29<01:27,  5.85s/it][A
+                                              [A
+{'loss': '0.7192', 'grad_norm': '0.2393', 'learning_rate': '0.00016', 'entropy': '0.6785', 'num_tokens': '3.637e+04', 'mean_token_accuracy': '0.8479', 'epoch': '1.267'}
+ 25%|██▌       | 5/20 [00:29<01:27,  5.85s/it][A
+ 30%|███       | 6/20 [00:34<01:19,  5.70s/it][A
+                                              [A
+{'loss': '0.7439', 'grad_norm': '0.2422', 'learning_rate': '0.00015', 'entropy': '0.7696', 'num_tokens': '4.332e+04', 'mean_token_accuracy': '0.8394', 'epoch': '1.533'}
+ 30%|███       | 6/20 [00:34<01:19,  5.70s/it][A
+ 35%|███▌      | 7/20 [00:40<01:16,  5.90s/it][A
+                                              [A
+{'loss': '0.6708', 'grad_norm': '0.2207', 'learning_rate': '0.00014', 'entropy': '0.7893', 'num_tokens': '5.151e+04', 'mean_token_accuracy': '0.8549', 'epoch': '1.8'}
+ 35%|███▌      | 7/20 [00:40<01:16,  5.90s/it][A
+ 40%|████      | 8/20 [00:45<01:05,  5.43s/it][A
+                                              [A
+{'loss': '0.6371', 'grad_norm': '0.2441', 'learning_rate': '0.00013', 'entropy': '0.7936', 'num_tokens': '5.71e+04', 'mean_token_accuracy': '0.8601', 'epoch': '2'}
+ 40%|████      | 8/20 [00:45<01:05,  5.43s/it][A
+ 45%|████▌     | 9/20 [00:52<01:06,  6.01s/it][A
+                                              [A
+{'loss': '0.5484', 'grad_norm': '0.2578', 'learning_rate': '0.00012', 'entropy': '0.727', 'num_tokens': '6.475e+04', 'mean_token_accuracy': '0.8757', 'epoch': '2.267'}
+ 45%|████▌     | 9/20 [00:52<01:06,  6.01s/it][A
+ 50%|█████     | 10/20 [00:58<01:00,  6.01s/it][A
+                                               [A
+{'loss': '0.5467', 'grad_norm': '0.2637', 'learning_rate': '0.00011', 'entropy': '0.7256', 'num_tokens': '7.257e+04', 'mean_token_accuracy': '0.8786', 'epoch': '2.533'}
+ 50%|█████     | 10/20 [00:58<01:00,  6.01s/it][A
+ 55%|█████▌    | 11/20 [01:04<00:52,  5.83s/it][A
+                                               [A
+{'loss': '0.4667', 'grad_norm': '0.252', 'learning_rate': '0.0001', 'entropy': '0.5945', 'num_tokens': '7.951e+04', 'mean_token_accuracy': '0.8898', 'epoch': '2.8'}
+ 55%|█████▌    | 11/20 [01:04<00:52,  5.83s/it][A
+ 60%|██████    | 12/20 [01:08<00:44,  5.53s/it][A
+                                               [A
+{'loss': '0.4835', 'grad_norm': '0.2773', 'learning_rate': '9e-05', 'entropy': '0.6566', 'num_tokens': '8.566e+04', 'mean_token_accuracy': '0.8901', 'epoch': '3'}
+ 60%|██████    | 12/20 [01:08<00:44,  5.53s/it][A
+ 65%|██████▌   | 13/20 [01:15<00:40,  5.82s/it][A
+                                               [A
+{'loss': '0.4375', 'grad_norm': '0.2461', 'learning_rate': '8e-05', 'entropy': '0.5715', 'num_tokens': '9.328e+04', 'mean_token_accuracy': '0.8986', 'epoch': '3.267'}
+ 65%|██████▌   | 13/20 [01:15<00:40,  5.82s/it][A
+ 70%|███████   | 14/20 [01:21<00:35,  5.86s/it][A
+{'loss': '0.4141', 'grad_norm': '0.3359', 'learning_rate': '7e-05', 'entropy': '0.537', 'num_tokens': '1.009e+05', 'mean_token_accuracy': '0.8993', 'epoch': '3.533'}
+                                               [A
+ 70%|███████   | 14/20 [01:21<00:35,  5.86s/it][A
+ 75%|███████▌  | 15/20 [01:27<00:29,  5.88s/it][A
+                                               [A
+{'loss': '0.3599', 'grad_norm': '0.2578', 'learning_rate': '6e-05', 'entropy': '0.4374', 'num_tokens': '1.084e+05', 'mean_token_accuracy': '0.9111', 'epoch': '3.8'}
+ 75%|███████▌  | 15/20 [01:27<00:29,  5.88s/it][A
+ 80%|████████  | 16/20 [01:31<00:22,  5.50s/it][A
+                                               [A
+{'loss': '0.2364', 'grad_norm': '0.2754', 'learning_rate': '5e-05', 'entropy': '0.328', 'num_tokens': '1.142e+05', 'mean_token_accuracy': '0.938', 'epoch': '4'}
+ 80%|████████  | 16/20 [01:31<00:22,  5.50s/it][A
+ 85%|████████▌ | 17/20 [01:38<00:17,  5.81s/it][A
+                                               [A
+{'loss': '0.3648', 'grad_norm': '0.2715', 'learning_rate': '4e-05', 'entropy': '0.4187', 'num_tokens': '1.217e+05', 'mean_token_accuracy': '0.9143', 'epoch': '4.267'}
+ 85%|████████▌ | 17/20 [01:38<00:17,  5.81s/it][A
+ 90%|█████████ | 18/20 [01:44<00:12,  6.01s/it][A
+                                               [A
+{'loss': '0.2731', 'grad_norm': '0.252', 'learning_rate': '3e-05', 'entropy': '0.3601', 'num_tokens': '1.299e+05', 'mean_token_accuracy': '0.936', 'epoch': '4.533'}
+ 90%|█████████ | 18/20 [01:44<00:12,  6.01s/it][A
+ 95%|█████████▌| 19/20 [01:50<00:05,  5.93s/it][A
+                                               [A
+{'loss': '0.2764', 'grad_norm': '0.249', 'learning_rate': '2e-05', 'entropy': '0.3304', 'num_tokens': '1.372e+05', 'mean_token_accuracy': '0.9352', 'epoch': '4.8'}
+ 95%|█████████▌| 19/20 [01:50<00:05,  5.93s/it][A
+100%|██████████| 20/20 [01:55<00:00,  5.50s/it][A
+{'loss': '0.1924', 'grad_norm': '0.2734', 'learning_rate': '1e-05', 'entropy': '0.2629', 'num_tokens': '1.428e+05', 'mean_token_accuracy': '0.9483', 'epoch': '5'}
+                                               [A
+100%|██████████| 20/20 [01:55<00:00,  5.50s/it][A
+                                               [A
+{'train_runtime': '115.8', 'train_samples_per_second': '0.648', 'train_steps_per_second': '0.173', 'train_loss': '0.5623', 'epoch': '5'}
+100%|██████████| 20/20 [01:55<00:00,  5.50s/it][A100%|██████████| 20/20 [01:55<00:00,  5.79s/it]
+$ /root/.cache/uv/builds-v0/.tmpQi62S5/bin/python -m legacy_cobol_env.eval.run_model_rollouts --provider local-transformers --max-repairs 2 --output legacy_cobol_env/outputs/evals/sft_local_qwen3_14b_all_tasks.json
+
+Loading weights:   0%|          | 0/443 [00:00<?, ?it/s][A
+Loading weights:  28%|██▊       | 125/443 [00:01<00:02, 124.05it/s][A
+Loading weights:  68%|██████▊   | 302/443 [00:02<00:00, 154.42it/s][ALoading weights: 100%|██████████| 443/443 [00:02<00:00, 158.23it/s]
+/root/.cache/uv/archive-v0/_zCg95lZEBKJ9MwE5wW11/lib/python3.12/site-packages/bitsandbytes/backends/cuda/ops.py:468: FutureWarning: _check_is_size will be removed in a future PyTorch release along with guard_size_oblivious.     Use _check(i >= 0) instead.
+  torch._check_is_size(blocksize)
+/root/.cache/uv/archive-v0/_zCg95lZEBKJ9MwE5wW11/lib/python3.12/site-packages/bitsandbytes/backends/cuda/ops.py:468: FutureWarning: _check_is_size will be removed in a future PyTorch release along with guard_size_oblivious.     Use _check(i >= 0) instead.
+  torch._check_is_size(blocksize)
+
+Loading weights:   0%|          | 0/443 [00:00<?, ?it/s][A
+Loading weights:  30%|██▉       | 131/443 [00:01<00:02, 130.36it/s][A
+Loading weights:  71%|███████   | 313/443 [00:02<00:00, 159.45it/s][ALoading weights: 100%|██████████| 443/443 [00:02<00:00, 162.77it/s]
+/root/.cache/uv/archive-v0/_zCg95lZEBKJ9MwE5wW11/lib/python3.12/site-packages/bitsandbytes/backends/cuda/ops.py:468: FutureWarning: _check_is_size will be removed in a future PyTorch release along with guard_size_oblivious.     Use _check(i >= 0) instead.
+  torch._check_is_size(blocksize)
+/root/.cache/uv/archive-v0/_zCg95lZEBKJ9MwE5wW11/lib/python3.12/site-packages/bitsandbytes/backends/cuda/ops.py:468: FutureWarning: _check_is_size will be removed in a future PyTorch release along with guard_size_oblivious.     Use _check(i >= 0) instead.
+  torch._check_is_size(blocksize)
+
+Loading weights:   0%|          | 0/443 [00:00<?, ?it/s][A
+Loading weights:  29%|██▉       | 128/443 [00:01<00:02, 127.99it/s][A
+Loading weights:  70%|███████   | 312/443 [00:02<00:00, 159.54it/s][ALoading weights: 100%|██████████| 443/443 [00:02<00:00, 161.05it/s]
+/root/.cache/uv/archive-v0/_zCg95lZEBKJ9MwE5wW11/lib/python3.12/site-packages/bitsandbytes/backends/cuda/ops.py:468: FutureWarning: _check_is_size will be removed in a future PyTorch release along with guard_size_oblivious.     Use _check(i >= 0) instead.
+  torch._check_is_size(blocksize)
+/root/.cache/uv/archive-v0/_zCg95lZEBKJ9MwE5wW11/lib/python3.12/site-packages/bitsandbytes/backends/cuda/ops.py:468: FutureWarning: _check_is_size will be removed in a future PyTorch release along with guard_size_oblivious.     Use _check(i >= 0) instead.
+  torch._check_is_size(blocksize)
+/root/.cache/uv/archive-v0/_zCg95lZEBKJ9MwE5wW11/lib/python3.12/site-packages/bitsandbytes/backends/cuda/ops.py:468: FutureWarning: _check_is_size will be removed in a future PyTorch release along with guard_size_oblivious.     Use _check(i >= 0) instead.
+  torch._check_is_size(blocksize)
+
+Loading weights:   0%|          | 0/443 [00:00<?, ?it/s][A
+Loading weights:  31%|███       | 136/443 [00:01<00:02, 134.77it/s][A
+Loading weights:  71%|███████   | 314/443 [00:02<00:00, 158.50it/s][ALoading weights: 100%|██████████| 443/443 [00:02<00:00, 162.51it/s]
+/root/.cache/uv/archive-v0/_zCg95lZEBKJ9MwE5wW11/lib/python3.12/site-packages/bitsandbytes/backends/cuda/ops.py:468: FutureWarning: _check_is_size will be removed in a future PyTorch release along with guard_size_oblivious.     Use _check(i >= 0) instead.
+  torch._check_is_size(blocksize)
+/root/.cache/uv/archive-v0/_zCg95lZEBKJ9MwE5wW11/lib/python3.12/site-packages/bitsandbytes/backends/cuda/ops.py:468: FutureWarning: _check_is_size will be removed in a future PyTorch release along with guard_size_oblivious.     Use _check(i >= 0) instead.
+  torch._check_is_size(blocksize)
+
+Loading weights:   0%|          | 0/443 [00:00<?, ?it/s][A
+Loading weights:  31%|███       | 136/443 [00:01<00:02, 134.50it/s][A
+Loading weights:  71%|███████   | 314/443 [00:02<00:00, 159.69it/s][ALoading weights: 100%|██████████| 443/443 [00:02<00:00, 163.15it/s]
+/root/.cache/uv/archive-v0/_zCg95lZEBKJ9MwE5wW11/lib/python3.12/site-packages/bitsandbytes/backends/cuda/ops.py:468: FutureWarning: _check_is_size will be removed in a future PyTorch release along with guard_size_oblivious.     Use _check(i >= 0) instead.
+  torch._check_is_size(blocksize)
+/root/.cache/uv/archive-v0/_zCg95lZEBKJ9MwE5wW11/lib/python3.12/site-packages/bitsandbytes/backends/cuda/ops.py:468: FutureWarning: _check_is_size will be removed in a future PyTorch release along with guard_size_oblivious.     Use _check(i >= 0) instead.
+  torch._check_is_size(blocksize)
+/root/.cache/uv/archive-v0/_zCg95lZEBKJ9MwE5wW11/lib/python3.12/site-packages/bitsandbytes/backends/cuda/ops.py:468: FutureWarning: _check_is_size will be removed in a future PyTorch release along with guard_size_oblivious.     Use _check(i >= 0) instead.
+  torch._check_is_size(blocksize)
+
+Loading weights:   0%|          | 0/443 [00:00<?, ?it/s][A
+Loading weights:  29%|██▉       | 130/443 [00:01<00:02, 129.99it/s][A
+Loading weights:  70%|███████   | 312/443 [00:02<00:00, 159.38it/s][ALoading weights: 100%|██████████| 443/443 [00:02<00:00, 162.16it/s]
+/root/.cache/uv/archive-v0/_zCg95lZEBKJ9MwE5wW11/lib/python3.12/site-packages/bitsandbytes/backends/cuda/ops.py:468: FutureWarning: _check_is_size will be removed in a future PyTorch release along with guard_size_oblivious.     Use _check(i >= 0) instead.
+  torch._check_is_size(blocksize)
+/root/.cache/uv/archive-v0/_zCg95lZEBKJ9MwE5wW11/lib/python3.12/site-packages/bitsandbytes/backends/cuda/ops.py:468: FutureWarning: _check_is_size will be removed in a future PyTorch release along with guard_size_oblivious.     Use _check(i >= 0) instead.
+  torch._check_is_size(blocksize)
+/root/.cache/uv/archive-v0/_zCg95lZEBKJ9MwE5wW11/lib/python3.12/site-packages/bitsandbytes/backends/cuda/ops.py:468: FutureWarning: _check_is_size will be removed in a future PyTorch release along with guard_size_oblivious.     Use _check(i >= 0) instead.
+  torch._check_is_size(blocksize)
+{
+  "provider": "local-transformers",
+  "task_count": 6,
+  "mean_public_score": 0.7971166666666667,
+  "accepted_count": 4
+}
+Traceback (most recent call last):
+  File "//hf_qwen3_14b_train_job_h200.py", line 108, in <module>
+    state = json.loads((out / "trainer_state.json").read_text())
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/pathlib.py", line 1027, in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors) as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/pathlib.py", line 1013, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'legacy_cobol_env/outputs/training/sft-qwen3-14b-clean/trainer_state.json'

@@ -1,0 +1,16 @@
+{
+  "model": "Qwen/Qwen3-14B",
+  "method": "Hugging Face TRL LoRA SFT",
+  "job_id": "69edbce1d70108f37acdfcdf",
+  "hardware": "HF Jobs l40sx1",
+  "dataset_examples": 15,
+  "loss_first": 1.135,
+  "loss_last": 0.1924,
+  "mean_token_accuracy_first": 0.7938,
+  "mean_token_accuracy_last": 0.9483,
+  "base_mean_public_score": 0.532,
+  "trained_mean_public_score": 0.7971166666666667,
+  "base_accepted_count": 2,
+  "trained_accepted_count": 4,
+  "task_count": 6
+}

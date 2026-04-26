@@ -1,0 +1,131 @@
+{
+  "policies": {
+    "blank_width": {
+      "mean_public_score": 0.17666666666666667,
+      "accepted_count": 0,
+      "task_count": 6
+    },
+    "identity": {
+      "mean_public_score": 0.15,
+      "accepted_count": 0,
+      "task_count": 6
+    },
+    "oracle-model": {
+      "mean_public_score": 1.0,
+      "accepted_count": 6,
+      "task_count": 6,
+      "role": "oracle_sanity"
+    },
+    "base Qwen3-14B": {
+      "mean_public_score": 0.532,
+      "accepted_count": 2,
+      "task_count": 6,
+      "role": "base_model_before_sft"
+    },
+    "trained Qwen3-14B LoRA SFT": {
+      "mean_public_score": 0.7971166666666667,
+      "accepted_count": 4,
+      "task_count": 6,
+      "role": "trained_model_after_sft",
+      "model": "Qwen/Qwen3-14B",
+      "method": "Hugging Face TRL LoRA SFT"
+    }
+  },
+  "task_scores": {
+    "payroll_net_pay_001": {
+      "identity": 0.15,
+      "blank_width": 0.15,
+      "oracle_model": 1.0,
+      "base_qwen3_14b": 0.472
+    },
+    "customer_format_001": {
+      "identity": 0.15,
+      "blank_width": 0.15,
+      "oracle_model": 1.0,
+      "base_qwen3_14b": 0.34
+    },
+    "claims_eligibility_001": {
+      "identity": 0.15,
+      "blank_width": 0.23,
+      "oracle_model": 1.0,
+      "base_qwen3_14b": 1.0
+    },
+    "account_status_001": {
+      "identity": 0.15,
+      "blank_width": 0.23,
+      "oracle_model": 1.0,
+      "base_qwen3_14b": 1.0
+    },
+    "invoice_occurs_001": {
+      "identity": 0.15,
+      "blank_width": 0.15,
+      "oracle_model": 1.0,
+      "base_qwen3_14b": 0.15
+    },
+    "date_normalization_001": {
+      "identity": 0.15,
+      "blank_width": 0.15,
+      "oracle_model": 1.0,
+      "base_qwen3_14b": 0.23
+    }
+  },
+  "judge_table": [
+    {
+      "policy": "blank_width",
+      "role": null,
+      "mean_public_score": 0.17666666666666667,
+      "accepted_count": 0,
+      "task_count": 6
+    },
+    {
+      "policy": "identity",
+      "role": null,
+      "mean_public_score": 0.15,
+      "accepted_count": 0,
+      "task_count": 6
+    },
+    {
+      "policy": "oracle-model",
+      "role": "oracle_sanity",
+      "mean_public_score": 1.0,
+      "accepted_count": 6,
+      "task_count": 6
+    },
+    {
+      "policy": "base Qwen3-14B",
+      "role": "base_model_before_sft",
+      "mean_public_score": 0.532,
+      "accepted_count": 2,
+      "task_count": 6
+    },
+    {
+      "policy": "trained Qwen3-14B LoRA SFT",
+      "role": "trained_model_after_sft",
+      "mean_public_score": 0.7971166666666667,
+      "accepted_count": 4,
+      "task_count": 6
+    }
+  ],
+  "training_evidence": {
+    "model": "Qwen/Qwen3-14B",
+    "method": "Hugging Face TRL LoRA SFT",
+    "dataset_examples": 15,
+    "loss_first": 1.135,
+    "loss_last": 0.1924,
+    "mean_token_accuracy_first": 0.7938,
+    "mean_token_accuracy_last": 0.9483,
+    "base_mean_public_score": 0.532,
+    "trained_mean_public_score": 0.7971166666666667,
+    "base_accepted_count": 2,
+    "trained_accepted_count": 4,
+    "task_count": 6
+  },
+  "training_targets": [],
+  "evidence_notes": [
+    "missing rollout artifact: outputs/evals/azure_gpt54mini_zeroshot_rollouts.json",
+    "missing rollout artifact: outputs/evals/azure_gpt54mini_repair1_rollouts.json",
+    "historical artifact retained outside current score summary: outputs/evals/historical/azure_gpt54mini_payroll_probe.json",
+    "historical artifact retained outside current score summary: outputs/evals/historical/azure_gpt54mini_repair1_rollouts.json",
+    "historical artifact retained outside current score summary: outputs/evals/historical/azure_gpt54mini_zeroshot_rollouts.json"
+  ]
+}

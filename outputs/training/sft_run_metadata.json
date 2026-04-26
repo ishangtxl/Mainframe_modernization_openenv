@@ -1,0 +1,32 @@
+{
+  "status": "completed",
+  "created_at": "2026-04-26T07:21:05.747000+00:00",
+  "model": "Qwen/Qwen3-14B",
+  "method": "Hugging Face TRL LoRA SFT",
+  "job_id": "69edbce1d70108f37acdfcdf",
+  "hardware": "HF Jobs l40sx1",
+  "dataset": "legacy_cobol_env/outputs/training/oracle_sft.jsonl",
+  "dataset_examples": 15,
+  "num_train_epochs": 5,
+  "max_seq_length": 2048,
+  "lora_rank": 16,
+  "lora_alpha": 32,
+  "loss_first": 1.135,
+  "loss_last": 0.1924,
+  "mean_token_accuracy_first": 0.7938,
+  "mean_token_accuracy_last": 0.9483,
+  "base_mean_public_score": 0.532,
+  "trained_mean_public_score": 0.7971166666666667,
+  "base_accepted_count": 2,
+  "trained_accepted_count": 4,
+  "task_count": 6,
+  "artifacts": {
+    "loss_csv": "outputs/training/sft_loss.csv",
+    "loss_plot": "plots/qwen3_14b_loss_curve.png",
+    "reward_plot": "plots/qwen3_14b_reward_before_after.png",
+    "accepted_plot": "plots/qwen3_14b_accepted_before_after.png",
+    "raw_hf_job_log": "outputs/training/hf_job_qwen3_14b_logs.txt",
+    "summary": "outputs/training/qwen3_14b_training_evidence_summary.json"
+  },
+  "note": "Training and local evaluation artifacts were extracted from the HF Jobs run. The raw job log includes a later post-run artifact upload traceback after the training and evaluation summary had been emitted."
+}
