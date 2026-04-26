@@ -23,6 +23,7 @@ The target capability is not one-shot translation. Real modernization depends on
 
 - Mini-blog: [`blog.md`](blog.md)
 - Hugging Face Space: <https://huggingface.co/spaces/Ishangtxl/mainframe-modernization-openenv>
+- Training run notebook: <https://colab.research.google.com/drive/1XGcw8Xkcyx1byYqSu5jpF9UWPIQWWBCi?usp=sharing>
 - Training evidence: [`outputs/training/sft_run_metadata.json`](outputs/training/sft_run_metadata.json)
 - Training log: [`outputs/training/hf_job_qwen3_14b_logs.txt`](outputs/training/hf_job_qwen3_14b_logs.txt)
 - Score summary: [`outputs/evals/score_summary.json`](outputs/evals/score_summary.json)
