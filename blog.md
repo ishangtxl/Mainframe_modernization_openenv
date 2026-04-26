@@ -51,7 +51,7 @@ The reward is multi-component on purpose: hidden correctness, fresh correctness,
 
 The task bank covers six families pulled from problems we've actually seen at work: customer records with fixed-width string fields, payroll with copybooks and signed deductions, claims eligibility with `EVALUATE TRUE` branching, account status driven by level-88 condition names, multi-file invoices with `OCCURS` groups and an external tax-rate program, and date normalization with the two-digit-year windowing rules COBOL is famous for.
 
-The environment is hosted on Hugging Face Spaces. Training is GRPO via TRL, with Unsloth handling the efficient inference. The whole thing speaks the standard OpenEnv `reset` / `step` / `state` interface.
+The environment is hosted on Hugging Face Spaces. The current training evidence comes from Hugging Face TRL LoRA SFT on Qwen3-14B. The whole thing speaks the standard OpenEnv `reset` / `step` / `state` interface.
 
 ## The point of the demo
 
